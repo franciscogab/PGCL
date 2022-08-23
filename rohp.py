@@ -77,7 +77,7 @@ def diagnostico():
             st.write('Todos os envolvidos conhecem e prezam pelo Programa de Integridade da Marinha do Brasil.')    
         with c2:
             integridade = st.radio('',[1,2,3,4,5], key='integridade', horizontal=True)
-        
+        st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2,c3=st.columns([1,10,1])
         with c1:
             voltar = st.form_submit_button('Voltar')
