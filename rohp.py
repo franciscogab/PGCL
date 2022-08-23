@@ -17,7 +17,7 @@ def principal():
         diagnostico()
 
 def diagnostico():
-    st.title('Diagnostico')
+    st.title('Diagnóstico')
     st.write('')
 
     with st.form('ROHP'):
@@ -25,7 +25,7 @@ def diagnostico():
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
-            st.write('**Conduta etica**')
+            st.write('**Conduta ética**')
             st.write('Os servidores detem total conhecimento sobre os conceitos envolvidos nas condtas eticas e sempre os aplicam.')    
         with c2:
             conduta_etica = st.radio('',(1,2,3,4,5), key='conduta', horizontal=True)
