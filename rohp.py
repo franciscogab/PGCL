@@ -9,7 +9,7 @@ def principal():
     \n2= Discordo
     \n3= Discordo Parcialmente
     \n4= Concordo
-    \n5= Concordo Totalmente 
+    \n5= Concordo Totalmente\n\n
     '''
 
     if st.button('Iniciar diagnóstico'):
