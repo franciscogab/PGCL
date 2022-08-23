@@ -17,7 +17,8 @@ def principal():
 
 def diagnostico():
     st.title('Diagnostico')
-
+    st.write('')
+    
     with st.form('ROHP'):
         st.subheader('Relacional')
         c1,c2 = st.columns([6,2])
