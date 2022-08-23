@@ -32,7 +32,7 @@ def diagnostico():
             st.write('Transmissão de conhecimentos e experiências via rede')
             st.write('Existe um canal de transmissão do conhecimento e troca de experiências entre os militares do setor bem como das demais áreas interessadas e este canal sempre é utilizado.')    
         with c2:
-            transmissao_conhecimento = st.radio(label='',[1,2,3,4,5], horizontal=True)
+            transmissao_conhecimento = st.radio('',[1,2,3,4,5], horizontal=True)
 
         c1,c2 = st.columns([6,2])
         with c1:
