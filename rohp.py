@@ -21,7 +21,7 @@ def relacional():
     st.write('')
 
     with st.form('ROHP'):
-        st.subheader('Relacional')
+        st.subheader('Dimensão Relacional')
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
@@ -92,63 +92,205 @@ def organizacional():
     st.write('')
 
     with st.form('ROHP'):
-        st.subheader('Organizacional')
+        st.subheader('Dimensão Organizacional')
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Ambiente propício (disseminação de conhecimento**')
             st.write(' Esta Organização apresenta um ambiente totalmente propício para a Disseminação de conhecimento.')    
         with c2:
-            ambiente_propicio = st.radio('',(1,2,3,4,5), key='conduta', horizontal=True)
+            ambiente_propicio = st.radio('',(1,2,3,4,5), key='ambiente_propicio', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Infraestrutura física e de processo**')
             st.write('A infraestrutura física e de processo são perfeitamente apropriadas para o alcance da Gestão do Conhecimento.')    
         with c2:
-            infraestrutura = st.radio('',[1,2,3,4,5], key='transmissao', horizontal=True)
+            infraestrutura = st.radio('',[1,2,3,4,5], key='infraestrutura', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Liderança formalmente estabelecidas (impoulsionadores da rede)**')
             st.write('As lideranças formalmente estabelecidas nos setores envolvidos impulsionam a rede de conhecimento?')    
         with c2:
-            liderança = st.radio('',[1,2,3,4,5], key='comunicacao', horizontal=True)
+            liderança = st.radio('',[1,2,3,4,5], key='lideranca', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Estrutura de comunicação estabelecida**')
             st.write('Existe uma perfeita estrutura de comunicação estabelecida entre os setores.')    
         with c2:
-            estrutura_comunicacao = st.radio('',[1,2,3,4,5], key='praticas', horizontal=True)
+            estrutura_comunicacao = st.radio('',[1,2,3,4,5], key='estrutura_comunicacao', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Design (TMFT = Regimento iterno)**')
             st.write('A TMFT está organizada de forma a permitir o melhor funcionamento dos setores da OM.')    
         with c2:
-            design = st.radio('',[1,2,3,4,5], key='integracao', horizontal=True)
+            design = st.radio('',[1,2,3,4,5], key='design', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Alinhamento objetivos estratégicos**')
             st.write('Todas as ações executadas pelos setores visam sempre o alcance dos objetivos estratégicos da OM.')    
         with c2:
-            alinhamento = st.radio('',[1,2,3,4,5], key='programa', horizontal=True)
+            alinhamento = st.radio('',[1,2,3,4,5], key='alinhamento', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Normas e valores comunicados**')
             st.write('As normas e os valores da OM são comunicados de forma abrangente para alcançar a todos os envolvidos.')    
         with c2:
-            normas = st.radio('',[1,2,3,4,5], key='comprometimento', horizontal=True)
+            normas = st.radio('',[1,2,3,4,5], key='normas', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Estrutura de papéis e responsabilidades**')
             st.write('Existe uma formalização da estrutura de funções e responsabilidades e esta formalização é divulgada para todos os envolvidos.')    
         with c2:
-            estrutura = st.radio('',[1,2,3,4,5], key='integridade', horizontal=True)
+            estrutura = st.radio('',[1,2,3,4,5], key='estrutura', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2,c3=st.columns([1,10,1])
+        with c1:
+            voltar = st.form_submit_button('Voltar')
+        with c2:
+            st.write('')
+        with c3:
+            avancar = st.form_submit_button('Avançar')
+
+def humana():
+    st.title('Diagnóstico')
+    st.write('')
+
+    with st.form('ROHP'):
+        st.subheader('Dimensão Humana')
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Educação Formal**')
+            st.write('A educação formal, ou seja, a educação proveniente do período educacional escolar, dos militares e civis envolvidos é adequada.')    
+        with c2:
+            educacao = st.radio('',(1,2,3,4,5), key='educacao', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Treinamento continuado**')
+            st.write('A Organização possui calendário rotineiro de treinamentos e estimula a participação das pessoas.')    
+        with c2:
+            treinamento = st.radio('',[1,2,3,4,5], key='treinamento', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Perfil da tripulação: Aproveitamento de conhecimentos e experiências**')
+            st.write('A tripulação como um todo possui um perfil de aproveitamento adequado dos conhecimentos e experiências geradas.')    
+        with c2:
+            perfil = st.radio('',[1,2,3,4,5], key='perfil', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Formação dos instrutores internos**')
+            st.write('As pessoas responsáveis por realizar treinamentos internos com a tripulação possui formação adequada.')    
+        with c2:
+            formacao = st.radio('',[1,2,3,4,5], key='formacao', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Programa de desenvolvimento de liderança**')
+            st.write('A OM busca estimular o programa de desenvolvimento de liderança, ou seja, mostra uma preocupação com o aprendizado das habilidades e competências de líderes, seja Oficial ou Praça.')    
+        with c2:
+            programa = st.radio('',[1,2,3,4,5], key='programa', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Preocupação com aspectos motivacionais**')
+            st.write('As pessoas investidas de função de liderança demonstra total preocupação com aspectos motivacionais.')    
+        with c2:
+            preocupacao = st.radio('',[1,2,3,4,5], key='preocupacao', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Estímulos à criatividade**')
+            st.write('As pessoas investidas de função de liderança, seja Oficial ou Praça, demonstram estímulo à criatividade.')    
+        with c2:
+            estimulos = st.radio('',[1,2,3,4,5], key='estimulos', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Incentivo ao comprometimento**')
+            st.write('As pessoas investidas de função de liderança, seja Oficial ou Praça, demonstram total incentivo ao comprometimento perante a missão da OM.')    
+        with c2:
+            incentivo = st.radio('',[1,2,3,4,5], key='incentivo', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2,c3=st.columns([1,10,1])
+        with c1:
+            voltar = st.form_submit_button('Voltar')
+        with c2:
+            st.write('')
+        with c3:
+            avancar = st.form_submit_button('Avançar')
+
+def processual():
+    st.title('Diagnóstico')
+    st.write('')
+
+    with st.form('ROHP'):
+        st.subheader('Dimensão Processual')
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Sistematização de conhecimento**')
+            st.write('O conhecimento está sistematizado, ou seja, está ordenado, classificado e baseado em um parâmetro para atingir ao objetivo proposto.')    
+        with c2:
+            sistematizacao = st.radio('',(1,2,3,4,5), key='sistematizacao', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Práticas e processos de captação de pessoal (Mapa de competências)**')
+            st.write('Existem procedimentos de práticas e processos de captação de pessoal bem definidos e atualizados, como por exemplo, mapas de competências das pessoas que servem na OM.')    
+        with c2:
+            praticas_competencia = st.radio('',[1,2,3,4,5], key='praticas_competencia', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Processo de codificação**')
+            st.write('Existem métodos e incentivos para melhorar a codificação do conhecimento, ou seja, formas de facilitar o aprendizado e conhecimento.')    
+        with c2:
+            processo_codificacao = st.radio('',[1,2,3,4,5], key='processo_codificacao', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Conhecimento institucionalizados e experiências codificadas**')
+            st.write('Os conhecimentos atinentes ao setor estão institucionalizados e as experiências adquiridas estão codificadas, de maneira a facilitar o compartilhamento')    
+        with c2:
+            conhecimento = st.radio('',[1,2,3,4,5], key='conhecimento', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Programa de desenvolvimento de competências: Esforço em pesquisa e desenvolvimento**')
+            st.write('A OM sempre incentiva a área da pesquisa e desenvolvimento visando o desenvolvimento de competências. (Entende-se por desenvolvimento de competências a aquisição do conhecimento e o domínio das habilidades necessárias para desempenhar o seu papel).')    
+        with c2:
+            programa_competencia = st.radio('',[1,2,3,4,5], key='programa_competencia', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Uso de TIC para a gestão do conhecimento**')
+            st.write('Existem recursos tecnológicos direcionados para a Gestão do conhecimento.')    
+        with c2:
+            tic = st.radio('',[1,2,3,4,5], key='tic', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Gestão Documental**')
+            st.write('O Setor possui uma Gestão efetiva de documentos. (Considere Gestão de documentos a Organização, produção, uso e destinação dos documentos, de forma a tornar a informação mais acessível e sua guarda sustentável).')    
+        with c2:
+            gestao_doc = st.radio('',[1,2,3,4,5], key='gestao_doc', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Mapeamento de Processos**')
+            st.write('Os processos existentes estão inteiramente mapeados e atualizados.')    
+        with c2:
+            mapeamento = st.radio('',[1,2,3,4,5], key='mapeamento', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2,c3=st.columns([1,10,1])
         with c1:
