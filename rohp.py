@@ -18,7 +18,7 @@ def principal():
 def diagnostico():
     st.title('Diagnostico')
     t1,t2,t3,t4 = st.columns(4)
-    with st.form():
+    with st.form('ROHP'):
         with t1:
             st.title('Relacional')
         with t2:
