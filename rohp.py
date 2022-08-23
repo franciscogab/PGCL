@@ -22,9 +22,10 @@ def diagnostico():
         st.write('Relacional')
         c1,c2 = st.columns([11,1])
         with c1:
+            st.write('Conduta etica')
             st.write('Os servidores detem total conhecimento sobre os conceitos envolvidos nas condtas eticas e sempre os aplicam.')    
         with c2:
-            conduta_etica = st.selectbox('Conduta etica',[1,2,3,4,5])
+            conduta_etica = st.radio([1,2,3,4,5], index=3, horizontal=True)
     
         enviar = st.form_submit_button('Enviar')
 
