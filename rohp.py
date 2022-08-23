@@ -25,5 +25,7 @@ def diagnostico():
             st.write('Conduta etica')    
         with c2:
             conduta_etica = st.selectbox('',[1,2,3,4,5])
+    
+    enviar = st.submit_form_button('Enviar')
 
 principal()
