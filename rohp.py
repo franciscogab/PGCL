@@ -16,7 +16,7 @@ def principal():
     if st.button('Iniciar diagnóstico'):
         diagnostico()
 
-def diagnostico():
+def relacional():
     st.title('Diagnóstico')
     st.write('')
 
@@ -71,6 +71,77 @@ def diagnostico():
             st.write('É visível o comprometimento de todos os envolvidos no processo com os valores e comportamentos éticos na oraganização.')    
         with c2:
             comprometimento = st.radio('',[1,2,3,4,5], key='comprometimento', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Programa de integridade**')
+            st.write('Todos os envolvidos conhecem e prezam pelo Programa de Integridade da Marinha do Brasil.')    
+        with c2:
+            integridade = st.radio('',[1,2,3,4,5], key='integridade', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2,c3=st.columns([1,10,1])
+        with c1:
+            voltar = st.form_submit_button('Voltar')
+        with c2:
+            st.write('')
+        with c3:
+            avancar = st.form_submit_button('Avançar')
+        
+def organizacional():
+    st.title('Diagnóstico')
+    st.write('')
+
+    with st.form('ROHP'):
+        st.subheader('Organizacional')
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Ambiente propício (disseminação de conhecimento**')
+            st.write('Os servidores detem total conhecimento sobre os conceitos envolvidos nas condtas eticas e sempre os aplicam.')    
+        with c2:
+            ambiente_propicio = st.radio('',(1,2,3,4,5), key='conduta', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Infraestrutura física e de processo**')
+            st.write('Existe um canal de transmissão do conhecimento e troca de experiências entre os militares do setor bem como das demais áreas interessadas e este canal sempre é utilizado.')    
+        with c2:
+            infraestrutura = st.radio('',[1,2,3,4,5], key='transmissao', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Liderança formalmente estabelecidas (impoulsionadores da rede)**')
+            st.write('A comunicação entre os servidores do setor, bem como das demais áreas interessadas ocorre sem falhas e de forma objetiva.')    
+        with c2:
+            liderança = st.radio('',[1,2,3,4,5], key='comunicacao', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Estrutura de comunicação estabelecida**')
+            st.write('São realizados eventos que permitem a integração entre a tripulação.')    
+        with c2:
+            estrutura_comunicacao = st.radio('',[1,2,3,4,5], key='praticas', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Design (TMFT = Regimento iterno)**')
+            st.write('Os setores são totalmente integrados entre si, ou seja, os setores se complementam em busca do alcance da missão da OM.')    
+        with c2:
+            design = st.radio('',[1,2,3,4,5], key='integracao', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Alinhamento objetivos estratégicos**')
+            st.write('Existe um programa bem definido e atualizado sobre a integração entre a OM apoiadora e as demais OM apoiadas.')    
+        with c2:
+            alinhamento = st.radio('',[1,2,3,4,5], key='programa', horizontal=True)
+        st.markdown('<hr>', unsafe_allow_html=True)
+        c1,c2 = st.columns([6,2])
+        with c1:
+            st.write('**Normas e valores comunicados**')
+            st.write('É visível o comprometimento de todos os envolvidos no processo com os valores e comportamentos éticos na oraganização.')    
+        with c2:
+            normas = st.radio('',[1,2,3,4,5], key='comprometimento', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
