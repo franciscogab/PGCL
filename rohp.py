@@ -86,7 +86,6 @@ def diagnostico():
             st.write('')
         with c3:
             avancar = st.form_submit_button('Avançar')
-                organizacional()
 
         
          
