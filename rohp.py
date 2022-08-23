@@ -26,7 +26,7 @@ def diagnostico():
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Conduta ética**')
-            st.write('Os servidores detem total conhecimento sobre os conceitos envolvidos nas condtas eticas e sempre os aplicam.')    
+            st.write('Os servidores detém total conhecimento sobre os conceitos envolvidos nas condutas éticas e sempre os aplicam.')    
         with c2:
             conduta_etica = st.radio('',(1,2,3,4,5), key='conduta', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
