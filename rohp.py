@@ -21,6 +21,7 @@ def diagnostico():
     with st.form('ROHP'):
         with t1:
             st.write('Relacional')
+            conduta = st.selectbox('Conduta etica',[1,2,3,4,5])
         with t2:
             st.write('Organizacional')
         with t3:
