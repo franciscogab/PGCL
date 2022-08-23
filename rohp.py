@@ -11,4 +11,8 @@ def principal():
     \n4= Concordo
     \n5= Concordo Totalmente 
     '''
+
+    if st.button('Iniciar diagnostico'):
+        diagnostico()
+        
 principal()
