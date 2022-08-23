@@ -20,13 +20,13 @@ def diagnostico():
     t1,t2,t3,t4 = st.columns(4)
     with st.form('ROHP'):
         with t1:
-            st.title('Relacional')
+            st.write('Relacional')
         with t2:
-            st.title('Organizacional')
+            st.write('Organizacional')
         with t3:
-            st.title('Humana')
+            st.write('Humana')
         with t4:
-            st.title('Processual')
+            st.write('Processual')
 
 
 principal()
