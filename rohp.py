@@ -14,7 +14,7 @@ def principal():
     st.write('##')
 
     if st.button('Iniciar diagnóstico'):
-        diagnostico()
+        relacional()
 
 def relacional():
     st.title('Diagnóstico')
@@ -85,7 +85,8 @@ def relacional():
         with c2:
             st.write('')
         with c3:
-            avancar = st.form_submit_button('Avançar')
+            avancar = st.form_submit_button('Avançar'):
+            organizacional()
         
 def organizacional():
     st.title('Diagnóstico')
