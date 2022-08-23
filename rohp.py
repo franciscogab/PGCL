@@ -25,56 +25,56 @@ def diagnostico():
             st.write('Conduta etica')
             st.write('Os servidores detem total conhecimento sobre os conceitos envolvidos nas condtas eticas e sempre os aplicam.')    
         with c2:
-            conduta_etica = st.radio('',(1,2,3,4,5), horizontal=True)
+            conduta_etica = st.radio('',(1,2,3,4,5), key='conduta', horizontal=True)
 
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('Transmissão de conhecimentos e experiências via rede')
             st.write('Existe um canal de transmissão do conhecimento e troca de experiências entre os militares do setor bem como das demais áreas interessadas e este canal sempre é utilizado.')    
         with c2:
-            transmissao_conhecimento = st.radio('',[1,2,3,4,5], horizontal=True)
+            transmissao_conhecimento = st.radio('',[1,2,3,4,5], key='transmissao', horizontal=True)
 
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('Comunicação')
             st.write('A comunicação entre os servidores do setor, bem como das demais áreas interessadas ocorre sem falhas e de forma objetiva.')    
         with c2:
-            comunicacao = st.radio('',[1,2,3,4,5], horizontal=True)
+            comunicacao = st.radio('',[1,2,3,4,5], key='comunicacao', horizontal=True)
 
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('Práticas de integração')
             st.write('São realizados eventos que permitem a integração entre a tripulação.')    
         with c2:
-            praticas_integracao = st.radio('',[1,2,3,4,5], horizontal=True)
+            praticas_integracao = st.radio('',[1,2,3,4,5], key='praticas', horizontal=True)
 
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('Integração entre setores')
             st.write('Os setores são totalmente integrados entre si, ou seja, os setores se complementam em busca do alcance da missão da OM.')    
         with c2:
-            integracao_setores = st.radio('',[1,2,3,4,5], horizontal=True)
+            integracao_setores = st.radio('',[1,2,3,4,5], key='integracao', horizontal=True)
 
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('Programa de integração com organizações participantes')
             st.write('Existe um programa bem definido e atualizado sobre a integração entre a OM apoiadora e as demais OM apoiadas.')    
         with c2:
-            programa_integracao = st.radio('',[1,2,3,4,5], horizontal=True)
+            programa_integracao = st.radio('',[1,2,3,4,5], key='programa', horizontal=True)
 
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('Comprometimento de todos os valores e comportamentos éticos na organização')
             st.write('É visível o comprometimento de todos os envolvidos no processo com os valores e comportamentos éticos na oraganização.')    
         with c2:
-            conduta_etica = st.radio('',[1,2,3,4,5], horizontal=True)
+            comprometimento = st.radio('',[1,2,3,4,5], key='comprometimento', horizontal=True)
 
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('Programa de integridade')
             st.write('Todos os envolvidos conhecem e prezam pelo Programa de Integridade da Marinha do Brasil.')    
         with c2:
-            conduta_etica = st.radio('',[1,2,3,4,5], horizontal=True)
+            integridade = st.radio('',[1,2,3,4,5], key='integridade', horizontal=True)
     
         enviar = st.form_submit_button('Enviar')
 
