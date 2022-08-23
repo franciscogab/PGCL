@@ -25,21 +25,21 @@ def diagnostico():
             st.write('Conduta etica')
             st.write('Os servidores detem total conhecimento sobre os conceitos envolvidos nas condtas eticas e sempre os aplicam.')    
         with c2:
-            conduta_etica = st.radio('',[1,2,3,4,5], index=3, horizontal=True)
+            conduta_etica = st.radio(label='',[1,2,3,4,5], index=3, horizontal=True)
 
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('Transmissão de conhecimentos e experiências via rede')
             st.write('Existe um canal de transmissão do conhecimento e troca de experiências entre os militares do setor bem como das demais áreas interessadas e este canal sempre é utilizado.')    
         with c2:
-            transmissao_conhecimento = st.radio('',[1,2,3,4,5], index=3, horizontal=True)
+            transmissao_conhecimento = st.radio(label='',[1,2,3,4,5], index=3, horizontal=True)
 
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('Comunicação')
             st.write('A comunicação entre os servidores do setor, bem como das demais áreas interessadas ocorre sem falhas e de forma objetiva.')    
         with c2:
-            comunicacao = st.radio('',[1,2,3,4,5], index=3, horizontal=True)
+            comunicacao = st.radio(label='',[1,2,3,4,5], index=3, horizontal=True)
 
         c1,c2 = st.columns([6,2])
         with c1:
