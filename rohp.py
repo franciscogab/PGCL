@@ -17,7 +17,7 @@ def principal():
 
 def diagnostico():
     st.title('Diagnostico')
-    t1,t2,t3,t4 = st.colums(4)
+    t1,t2,t3,t4 = st.columns(4)
     with st.form():
         with t1:
             st.title('Relacional')
