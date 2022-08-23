@@ -21,6 +21,7 @@ def diagnostico():
 
     with st.form('ROHP'):
         st.subheader('Relacional')
+        st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Conduta etica**')
@@ -34,42 +35,42 @@ def diagnostico():
             st.write('Existe um canal de transmissão do conhecimento e troca de experiências entre os militares do setor bem como das demais áreas interessadas e este canal sempre é utilizado.')    
         with c2:
             transmissao_conhecimento = st.radio('',[1,2,3,4,5], key='transmissao', horizontal=True)
-
+        st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Comunicação**')
             st.write('A comunicação entre os servidores do setor, bem como das demais áreas interessadas ocorre sem falhas e de forma objetiva.')    
         with c2:
             comunicacao = st.radio('',[1,2,3,4,5], key='comunicacao', horizontal=True)
-
+        st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Práticas de integração**')
             st.write('São realizados eventos que permitem a integração entre a tripulação.')    
         with c2:
             praticas_integracao = st.radio('',[1,2,3,4,5], key='praticas', horizontal=True)
-
+        st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Integração entre setores**')
             st.write('Os setores são totalmente integrados entre si, ou seja, os setores se complementam em busca do alcance da missão da OM.')    
         with c2:
             integracao_setores = st.radio('',[1,2,3,4,5], key='integracao', horizontal=True)
-
+        st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Programa de integração com organizações participantes**')
             st.write('Existe um programa bem definido e atualizado sobre a integração entre a OM apoiadora e as demais OM apoiadas.')    
         with c2:
             programa_integracao = st.radio('',[1,2,3,4,5], key='programa', horizontal=True)
-
+        st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Comprometimento de todos os valores e comportamentos éticos na organização**')
             st.write('É visível o comprometimento de todos os envolvidos no processo com os valores e comportamentos éticos na oraganização.')    
         with c2:
             comprometimento = st.radio('',[1,2,3,4,5], key='comprometimento', horizontal=True)
-
+        st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Programa de integridade**')
