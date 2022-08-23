@@ -81,11 +81,11 @@ def diagnostico():
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2,c3=st.columns([1,10,1])
         with c1:
-            voltar = st.form_submit_button('Voltar'): diagnostico()
+            voltar = st.form_submit_button('Voltar')
         with c2:
             st.write('')
         with c3:
-            avancar = st.form_submit_button('Avançar'): organizacional()
+            avancar = st.form_submit_button('Avançar')
 
         
          
