@@ -20,7 +20,7 @@ def diagnostico():
 
     with st.form('ROHP'):
         st.write('Relacional')
-        c1,c2 = st.columns([11,1])
+        c1,c2 = st.columns([6,2])
         with c1:
             st.write('Conduta etica')
             st.write('Os servidores detem total conhecimento sobre os conceitos envolvidos nas condtas eticas e sempre os aplicam.')    
