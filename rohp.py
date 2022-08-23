@@ -85,7 +85,9 @@ def diagnostico():
         with c2:
             st.write('')
         with c3:
-            avancar = st.form_submit_button('Avançar'): organizacional()
+            avancar = st.form_submit_button('Avançar')
+            if st.button('Avançar'):
+            organizacional() 
         
 def organizacional():
     st.title('Diagnóstico')
