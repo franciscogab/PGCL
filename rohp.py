@@ -77,7 +77,13 @@ def diagnostico():
             st.write('Todos os envolvidos conhecem e prezam pelo Programa de Integridade da Marinha do Brasil.')    
         with c2:
             integridade = st.radio('',[1,2,3,4,5], key='integridade', horizontal=True)
-    
-        enviar = st.form_submit_button('Enviar')
+        
+        c1,c2,c3=st.columns([1,10,1])
+        with c1:
+            voltar = st.button('Voltar')
+        with c2:
+            st.write('')
+        with c3:
+            avancar = st.form_submit_button('Avançar')
 
 principal()
