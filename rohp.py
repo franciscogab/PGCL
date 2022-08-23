@@ -12,7 +12,21 @@ def principal():
     \n5= Concordo Totalmente 
     '''
 
-    if st.button('Iniciar diagnostico'):
+    if st.button('Iniciar diagnóstico'):
         diagnostico()
-        
+
+def diagnostico():
+    st.title('Diagnostico')
+    t1,t2,t3,t4 = st.colums(4)
+    with st.form():
+        with t1:
+            st.title('Relacional')
+        with t2:
+            st.title('Organizacional')
+        with t3:
+            st.title('Humana')
+        with t4:
+            st.title('Processual')
+
+
 principal()
