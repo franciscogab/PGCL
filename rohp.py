@@ -20,7 +20,7 @@ def diagnostico():
 
     with st.form('ROHP'):
         st.write('Relacional')
-        conduta = st.selectbox('Conduta etica',[1,2,3,4,5])
+        conduta = st.selectbox('',[1,2,3,4,5])
 
 
 principal()
