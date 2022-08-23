@@ -97,58 +97,58 @@ def organizacional():
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Ambiente propício (disseminação de conhecimento**')
-            st.write('Os servidores detem total conhecimento sobre os conceitos envolvidos nas condtas eticas e sempre os aplicam.')    
+            st.write(' Esta Organização apresenta um ambiente totalmente propício para a Disseminação de conhecimento.')    
         with c2:
             ambiente_propicio = st.radio('',(1,2,3,4,5), key='conduta', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Infraestrutura física e de processo**')
-            st.write('Existe um canal de transmissão do conhecimento e troca de experiências entre os militares do setor bem como das demais áreas interessadas e este canal sempre é utilizado.')    
+            st.write('A infraestrutura física e de processo são perfeitamente apropriadas para o alcance da Gestão do Conhecimento.')    
         with c2:
             infraestrutura = st.radio('',[1,2,3,4,5], key='transmissao', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Liderança formalmente estabelecidas (impoulsionadores da rede)**')
-            st.write('A comunicação entre os servidores do setor, bem como das demais áreas interessadas ocorre sem falhas e de forma objetiva.')    
+            st.write('As lideranças formalmente estabelecidas nos setores envolvidos impulsionam a rede de conhecimento?')    
         with c2:
             liderança = st.radio('',[1,2,3,4,5], key='comunicacao', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Estrutura de comunicação estabelecida**')
-            st.write('São realizados eventos que permitem a integração entre a tripulação.')    
+            st.write('Existe uma perfeita estrutura de comunicação estabelecida entre os setores.')    
         with c2:
             estrutura_comunicacao = st.radio('',[1,2,3,4,5], key='praticas', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Design (TMFT = Regimento iterno)**')
-            st.write('Os setores são totalmente integrados entre si, ou seja, os setores se complementam em busca do alcance da missão da OM.')    
+            st.write('A TMFT está organizada de forma a permitir o melhor funcionamento dos setores da OM.')    
         with c2:
             design = st.radio('',[1,2,3,4,5], key='integracao', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Alinhamento objetivos estratégicos**')
-            st.write('Existe um programa bem definido e atualizado sobre a integração entre a OM apoiadora e as demais OM apoiadas.')    
+            st.write('Todas as ações executadas pelos setores visam sempre o alcance dos objetivos estratégicos da OM.')    
         with c2:
             alinhamento = st.radio('',[1,2,3,4,5], key='programa', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Normas e valores comunicados**')
-            st.write('É visível o comprometimento de todos os envolvidos no processo com os valores e comportamentos éticos na oraganização.')    
+            st.write('As normas e os valores da OM são comunicados de forma abrangente para alcançar a todos os envolvidos.')    
         with c2:
             normas = st.radio('',[1,2,3,4,5], key='comprometimento', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
-            st.write('**Programa de integridade**')
-            st.write('Todos os envolvidos conhecem e prezam pelo Programa de Integridade da Marinha do Brasil.')    
+            st.write('**Estrutura de papéis e responsabilidades**')
+            st.write('Existe uma formalização da estrutura de funções e responsabilidades e esta formalização é divulgada para todos os envolvidos.')    
         with c2:
-            integridade = st.radio('',[1,2,3,4,5], key='integridade', horizontal=True)
+            estrutura = st.radio('',[1,2,3,4,5], key='integridade', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2,c3=st.columns([1,10,1])
         with c1:
