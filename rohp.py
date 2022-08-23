@@ -19,7 +19,7 @@ def diagnostico():
     st.title('Diagnostico')
 
     with st.form('ROHP'):
-        st.write('Relacional')
+        st.subheader('Relacional')
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('Conduta etica')
