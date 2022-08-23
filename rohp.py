@@ -9,8 +9,9 @@ def principal():
     \n2= Discordo
     \n3= Discordo Parcialmente
     \n4= Concordo
-    \n5= Concordo Totalmente\n\n
+    \n5= Concordo Totalmente
     '''
+    st.write('##')
 
     if st.button('Iniciar diagnóstico'):
         diagnostico()
