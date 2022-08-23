@@ -17,17 +17,10 @@ def principal():
 
 def diagnostico():
     st.title('Diagnostico')
-    t1,t2,t3,t4 = st.columns(4)
+
     with st.form('ROHP'):
-        with t1:
-            st.write('Relacional')
-            conduta = st.selectbox('Conduta etica',[1,2,3,4,5])
-        with t2:
-            st.write('Organizacional')
-        with t3:
-            st.write('Humana')
-        with t4:
-            st.write('Processual')
+        st.write('Relacional')
+        conduta = st.selectbox('Conduta etica',[1,2,3,4,5])
 
 
 principal()
