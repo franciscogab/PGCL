@@ -400,7 +400,7 @@ def relatorio():
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
     col1,col2=st.columns(2)
     with col1:
-        styler= relacional.style.hide_index().highlight_min(color='red').highlight_max(color='green')
+        styler= relacional.style.hide_index().highlight_min(color='red').backgroundGradient(cmap='Blues')
         st.markdown('''
         <style>
         #T_2d83c {background:#ccffff}        
