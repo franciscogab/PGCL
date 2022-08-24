@@ -387,7 +387,7 @@ def relatorio():
     PROCESSUAL={
         'Dimensão Processual':['Sistematização do conhecimento', 'Práticas e processos de captação de pessoal (Mapa de competências)',
         'Processo de codificação', 'Conhecimento institucionalizados e experiências codificadas', 'Programa de desenvolvimento de competências: Esforço em pesquisa e desenvolvimento',
-        'Gestão Documental', 'Mapeamento de Processos'],
+        'Uso de TIC para a gestão do conhecimento', 'Gestão Documental', 'Mapeamento de Processos'],
         'Notas':[st.session_state['sistematizacao'],st.session_state['praticas_competencia'],st.session_state['processo_codificacao'],
         st.session_state['conhecimento'],st.session_state['programa_competencia'],st.session_state['tic'],
         st.session_state['gestao_doc'],st.session_state['mapeamento']]}
