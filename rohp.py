@@ -373,6 +373,8 @@ try:
         principal()
     elif st.session_state['pagina_atual']=='formulario':
         formulario()
+    elif st.session_state['pagina_atual']=='relatorio':
+        relatorio()
 except Exception as err:
     #st.write(err)
     principal()
