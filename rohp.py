@@ -325,6 +325,7 @@ def relatorio():
     pass
 
 try:
-    pass
+    if st.session_state['pagina_atual']=='diagnostico':
+        diagnostico()
 except:
     principal()
