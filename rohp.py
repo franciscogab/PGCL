@@ -359,7 +359,14 @@ def formulario():
 
 def relatorio():
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
-
+    col1,col2=st.columns(2)
+    with col1:
+        st.markdown(f'''<table>
+        <caption>Relacional</caption>
+        <tbody><tr>
+        <th>Conduta Ética</th>
+        <td>{conduta_etica}</td></tr>''')
+   
 try:
     if st.session_state['pagina_atual']=='diagnostico':
         diagnostico()
