@@ -368,7 +368,7 @@ def relatorio():
     ORGANIZACIONAL={
         'Dimensão Organizacional':['Ambiente propício (disseminação de conhecimento)','Infraestrutura física e de processo',
         'Lideranças Formalmente estabelecidas (impulsionadores da rede)','Estrutura de Comunicação estabelecida', 
-        'Design (TMFT = Regimento interno)', 'Alinhamento objetivos estratégicos'
+        'Design (TMFT = Regimento interno)', 'Alinhamento objetivos estratégicos',
         'Normas e valores comunicados','Estrutura de papéis e responsabilidades'],
         'Notas':[st.session_state['ambiente_propicio'],st.session_state['infraestrutura'],
         st.session_state['lideranca'],st.session_state['estrutura_comunicacao'],
