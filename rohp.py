@@ -340,5 +340,11 @@ def relatorio():
 try:
     if st.session_state['pagina_atual']=='diagnostico':
         diagnostico()
+    elif st.session_state['pagina_atual']=='organizacional':
+        organizacional()
+    elif st.session_state['pagina_atual']=='humana':
+        humana()
+    elif st.session_state['pagina_atual']=='processual':
+        processual()
 except:
     principal()
