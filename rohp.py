@@ -399,14 +399,14 @@ def relatorio():
         styler= relacional.style.hide_index()
         st.write(styler.to_html(),unsafe_allow_html=True)
     with col2:
-        styler= relacional.style.hide_index()
+        styler2= organizacional.style.hide_index()
         st.write(styler.to_html(),unsafe_allow_html=True)
     col3,col4=st.columns(2)
     with col3:
-        styler= relacional.style.hide_index()
+        styler3= humana.style.hide_index()
         st.write(styler.to_html(),unsafe_allow_html=True)
     with col4:
-        styler= relacional.style.hide_index()
+        styler4= processual.style.hide_index()
         st.write(styler.to_html(),unsafe_allow_html=True)
         
    
