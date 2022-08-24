@@ -67,7 +67,7 @@ def diagnostico():
             st.write('**Programa de integração com organizações participantes**')
             st.write('Existe um programa bem definido e atualizado sobre a integração entre a OM apoiadora e as demais OM apoiadas.')    
         with c2:
-            st.session_state['programa_integracao'] = st.radio('',[1,2,3,4,5], key='programa', horizontal=True)
+            st.session_state['programa_integracao'] = st.radio('',[1,2,3,4,5], key='programa_int', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
