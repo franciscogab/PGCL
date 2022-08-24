@@ -347,6 +347,8 @@ try:
         humana()
     elif st.session_state['pagina_atual']=='processual':
         processual()
+    elif st.session_state['pagina_atual']=='principal':
+        principal()
 except Exception as err:
     st.write(err)
     principal()
