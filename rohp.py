@@ -327,15 +327,35 @@ def processual():
         with c3:
             avancar = st.form_submit_button('Avançar')
         if avancar: 
-            st.session_state['pagina_atual']='relatorio'
+            st.session_state['pagina_atual']='formulario'
             st.experimental_rerun()
         elif voltar:
             st.session_state['pagina_atual']='humana'
             st.experimental_rerun()
  
 
-def relatorio():
-    pass
+def formulario():
+    st.title('Formulário')
+    with st.form('form'):
+        om = st.text_input('OM')
+        nome = st.text_input('Nome Completo')
+        posto = st.text_input('Posto/Graduação')
+        funcao = st.text_input('Função')
+        meta = st.number_input('Meta por Dimensão', min_value=1, max_value=40, step=1, format='%d')
+        c1,c2,c3=st.columns([1,10,1])
+        with c1:
+            voltar = st.form_submit_button('Voltar')
+        with c2:
+            st.write('')
+        with c3:
+            avancar = st.form_submit_button('Concluir')
+        if avancar: 
+            st.session_state['pagina_atual']='relatorio'
+            st.experimental_rerun()
+        elif voltar:
+            st.session_state['pagina_atual']='processual'
+            st.experimental_rerun()
+
 
 try:
     if st.session_state['pagina_atual']=='diagnostico':
@@ -351,3 +371,4 @@ try:
 except Exception as err:
     #st.write(err)
     principal()
+
