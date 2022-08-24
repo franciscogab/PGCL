@@ -17,7 +17,7 @@ def principal():
     st.write('##')
 
     if st.button('Iniciar diagnóstico'):
-        nav_page('')
+        nav_page()
         st.session_state['pagina_atual']='diagnostico'
 
 def diagnostico():
