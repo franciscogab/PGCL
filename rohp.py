@@ -377,7 +377,7 @@ def relatorio():
     'Estrutura de Comunicação estabelecida':st.session_state['estrutura_comunicacao'],
     'Design (TMFT = Regimento interno)':st.session_state['design'],
     'Alinhamento objetivos estratégicos':st.session_state['alinhamento'],
-    'Normas e valores comunicados':st.session_state['norma']',
+    'Normas e valores comunicados':st.session_state['normas']',
     'Estrutura de papéis e responsabilidades':st.session_state['estrutura']
     }
     organizacional=pd.DataFrame(ORGANIZACIONAL)
