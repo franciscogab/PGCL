@@ -364,19 +364,17 @@ def relatorio():
        ,'Notas':[st.session_state['conduta_etica'],st.session_state['transmissao_conhecimento'],st.session_state['comunicacao'],st.session_state['praticas_integracao'],
         st.session_state['integracao_setores'],st.session_state['programa_integracao'],st.session_state['comprometimento'],st.session_state['integridade']]}
     relacional = pd.DataFrame(RELACIONAL)
-    '''
+    
     ORGANIZACIONAL={
-    'Ambiente propício (disseminação de conhecimento)':st.session_state['ambiente_propicio'],
-    'Infraestrutura física e de processo':st.session_state['infraestrutura'],
-    'Lideranças Formalmente estabelecidas (impulsionadores da rede)':st.session_state['lideranca'],
-    'Estrutura de Comunicação estabelecida':st.session_state['estrutura_comunicacao'],
-    'Design (TMFT = Regimento interno)':st.session_state['design'],
-    'Alinhamento objetivos estratégicos':st.session_state['alinhamento'],
-    'Normas e valores comunicados':st.session_state['normas'],
-    'Estrutura de papéis e responsabilidades':st.session_state['estrutura']
-    }
+        'Dimensão Organizacional':['Ambiente propício (disseminação de conhecimento)','Infraestrutura física e de processo',
+        'Lideranças Formalmente estabelecidas (impulsionadores da rede)','Estrutura de Comunicação estabelecida', 
+        'Design (TMFT = Regimento interno)', 'Alinhamento objetivos estratégicos'
+        'Normas e valores comunicados','Estrutura de papéis e responsabilidades'],
+        'Notas':[st.session_state['ambiente_propicio'],st.session_state['infraestrutura'],
+        st.session_state['lideranca'],st.session_state['estrutura_comunicacao'],
+        st.session_state['design'],st.session_state['alinhamento'],st.session_state['normas'],st.session_state['estrutura']]}
     organizacional=pd.DataFrame(ORGANIZACIONAL)
-
+    '''
     HUMANA={
     'Educação Formal':st.session_state['educacao'],
     'Treinamento continuado':st.session_state['treinamento'],
