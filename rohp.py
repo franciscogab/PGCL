@@ -358,7 +358,7 @@ def formulario():
 
 
 def relatorio():
-    st.markdown('<div style="text-align:center">Matriz ROHP</div>')
+    st.markdown('<div style="text-align:center">Matriz ROHP</div>', unsafe_allow_html=True)
 
 try:
     if st.session_state['pagina_atual']=='diagnostico':
