@@ -336,6 +336,7 @@ def processual():
 
 def formulario():
     st.title('Formulário')
+    st.set_page_config(layout='centered')
     with st.form('form'):
         om = st.text_input('OM')
         nome = st.text_input('Nome Completo')
