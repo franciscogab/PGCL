@@ -86,8 +86,10 @@ def diagnostico():
             st.write('')
         with c3:
             avancar = st.form_submit_button('Avançar')
-
-        
+        if avancar: 
+            organizacional()
+        elif voltar:
+            principal()            
          
         
 def organizacional():
@@ -160,6 +162,10 @@ def organizacional():
             st.write('')
         with c3:
             avancar = st.form_submit_button('Avançar')
+        if avancar: 
+            humana()
+        elif voltar:
+            diagnostico() 
 
 def humana():
     st.title('Diagnóstico')
@@ -231,6 +237,10 @@ def humana():
             st.write('')
         with c3:
             avancar = st.form_submit_button('Avançar')
+        if avancar: 
+            processual()
+        elif voltar:
+            organizacional() 
 
 def processual():
     st.title('Diagnóstico')
@@ -302,5 +312,12 @@ def processual():
             st.write('')
         with c3:
             avancar = st.form_submit_button('Avançar')
+        if avancar: 
+            relatorio()
+        elif voltar:
+            humana() 
+
+def relatorio():
+    pass
 
 principal()
