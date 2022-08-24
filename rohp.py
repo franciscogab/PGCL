@@ -357,6 +357,9 @@ def formulario():
             st.experimental_rerun()
 
 
+def relatorio():
+    st.markdown('<div style="text-align:center">Matriz ROHP</div>')
+
 try:
     if st.session_state['pagina_atual']=='diagnostico':
         diagnostico()
