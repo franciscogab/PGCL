@@ -19,7 +19,7 @@ def principal():
     if st.button('Iniciar diagnóstico'):
         nav_page('')
         st.session_state['pagina_atual']='diagnostico'
-        
+
 def diagnostico():
     st.title('Diagnóstico')
     st.write('')
@@ -325,6 +325,6 @@ def relatorio():
     pass
 
 try:
-
+    pass
 except:
     principal()
