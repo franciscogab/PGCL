@@ -74,7 +74,7 @@ def diagnostico():
             st.write('**Comprometimento de todos os valores e comportamentos éticos na organização**')
             st.write('É visível o comprometimento de todos os envolvidos no processo com os valores e comportamentos éticos na oraganização.')    
         with c2:
-            st.session_state['comprometimento'] = st.radio('',[1,2,3,4,5], key='comprometimento', horizontal=True)
+            st.session_state['comprometimento'] = st.radio('',[1,2,3,4,5], key='comprometimento_', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
