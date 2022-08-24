@@ -32,7 +32,7 @@ def diagnostico():
             st.write('**Conduta ética**')
             st.write('Os servidores detém total conhecimento sobre os conceitos envolvidos nas condutas éticas e sempre os aplicam.')    
         with c2:
-            conduta_etica = st.radio('',(1,2,3,4,5), key='conduta', horizontal=True)
+            st.session_state['conduta_etica'] = st.radio('',(1,2,3,4,5), key='conduta', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
@@ -359,7 +359,7 @@ def formulario():
 
 def relatorio():
     RELACIONAL={	
-    'Conduta Ética':conduta_etica,
+    'Conduta Ética':st.session_state['conduta_etica'],
     'Transmissão de conhecimentos e experiências via rede':transmissao_conhecimento,
     'Comunicação':comunicacao,
     'Práticas de Integração':praticas_integracao,
@@ -369,7 +369,7 @@ def relatorio():
     'Programa de Integridade':integridade
     }
     relacional = pd.DataFrame(RELACIONAL)
-
+    '''
     ORGANIZACIONAL={
     'Ambiente propício (disseminação de conhecimento)':ambiente_propicio,
     'Infraestrutura física e de processo':infraestrutura,
@@ -405,9 +405,9 @@ def relatorio():
     'Mapeamento de Processos':mapeamento
     }
     processual=pd.DataFrame(PROCESSUAL)
-
+    '''
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
-    st.table(processual)
+    st.table(relacional)
         
    
 try:
