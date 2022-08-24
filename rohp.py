@@ -368,7 +368,7 @@ def relatorio():
     'Comprometimento de todos os valores e comportamentos éticos na organização':comprometimento,
     'Programa de Integridade':integridade
     }
-    relacional=pd.DataFrame(RELACIONAL)
+    relacional = pd.DataFrame(RELACIONAL)
 
     ORGANIZACIONAL={
     'Ambiente propício (disseminação de conhecimento)':ambiente_propicio,
