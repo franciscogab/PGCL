@@ -17,8 +17,8 @@ def principal():
     st.write('##')
 
     if st.button('Iniciar diagnóstico'):
-        st.experimental_rerun()
         st.session_state['pagina_atual']='diagnostico'
+        st.experimental_rerun()
 
 def diagnostico():
     st.title('Diagnóstico')
