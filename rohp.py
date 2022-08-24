@@ -401,6 +401,8 @@ def relatorio():
     with col2:
         styler2= organizacional.style.hide_index()
         st.write(styler.to_html(),unsafe_allow_html=True)
+
+    st.write('##')
     col3,col4=st.columns(2)
     with col3:
         styler3= humana.style.hide_index()
