@@ -375,6 +375,7 @@ def relatorio():
         st.session_state['lideranca'],st.session_state['estrutura_comunicacao'],
         st.session_state['design'],st.session_state['alinhamento'],st.session_state['normas'],st.session_state['estrutura']]}
     organizacional=pd.DataFrame(ORGANIZACIONAL)
+    organizacional = pd.concat([organizacional, pd.DataFrame({'Dimensão Organizacional':['TOTAL'], 'Notas':[organizacional.Notas.sum()]})], axis = 0)
     
     HUMANA={
         'Dimensão Humana':['Educação Formal', 'Treinamento continuado', 'Perfil da tripulação: Aproveitamento de conhecimentos e Experiências', 
@@ -384,6 +385,7 @@ def relatorio():
         st.session_state['formacao'], st.session_state['programa'], st.session_state['preocupacao'],
         st.session_state['estimulos'], st.session_state['incentivo']]}
     humana=pd.DataFrame(HUMANA)
+    humana = pd.concat([humana, pd.DataFrame({'Dimensão Humana':['TOTAL'], 'Notas':[humana.Notas.sum()]})], axis = 0)
 
     PROCESSUAL={
         'Dimensão Processual':['Sistematização do conhecimento', 'Práticas e processos de captação de pessoal (Mapa de competências)',
@@ -393,6 +395,7 @@ def relatorio():
         st.session_state['conhecimento'],st.session_state['programa_competencia'],st.session_state['tic'],
         st.session_state['gestao_doc'],st.session_state['mapeamento']]}
     processual=pd.DataFrame(PROCESSUAL)
+    processual = pd.concat([processual, pd.DataFrame({'Dimensão Processual':['TOTAL'], 'Notas':[processual.Notas.sum()]})], axis = 0)
     
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
     col1,col2=st.columns(2)
