@@ -39,49 +39,49 @@ def diagnostico():
             st.write('**Transmissão de conhecimentos e experiências via rede**')
             st.write('Existe um canal de transmissão do conhecimento e troca de experiências entre os militares do setor bem como das demais áreas interessadas e este canal sempre é utilizado.')    
         with c2:
-            transmissao_conhecimento = st.radio('',[1,2,3,4,5], key='transmissao', horizontal=True)
+            st.session_state['transmissao_conhecimento'] = st.radio('',[1,2,3,4,5], key='transmissao', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Comunicação**')
             st.write('A comunicação entre os servidores do setor, bem como das demais áreas interessadas ocorre sem falhas e de forma objetiva.')    
         with c2:
-            comunicacao = st.radio('',[1,2,3,4,5], key='comunicacao', horizontal=True)
+            st.session_state['comunicacao'] = st.radio('',[1,2,3,4,5], key='comunicacao', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Práticas de integração**')
             st.write('São realizados eventos que permitem a integração entre a tripulação.')    
         with c2:
-            praticas_integracao = st.radio('',[1,2,3,4,5], key='praticas', horizontal=True)
+            st.session_state['praticas_integracao'] = st.radio('',[1,2,3,4,5], key='praticas', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Integração entre setores**')
             st.write('Os setores são totalmente integrados entre si, ou seja, os setores se complementam em busca do alcance da missão da OM.')    
         with c2:
-            integracao_setores = st.radio('',[1,2,3,4,5], key='integracao', horizontal=True)
+            st.session_state['integracao_setores'] = st.radio('',[1,2,3,4,5], key='integracao', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Programa de integração com organizações participantes**')
             st.write('Existe um programa bem definido e atualizado sobre a integração entre a OM apoiadora e as demais OM apoiadas.')    
         with c2:
-            programa_integracao = st.radio('',[1,2,3,4,5], key='programa', horizontal=True)
+            st.session_state['programa_integracao'] = st.radio('',[1,2,3,4,5], key='programa', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Comprometimento de todos os valores e comportamentos éticos na organização**')
             st.write('É visível o comprometimento de todos os envolvidos no processo com os valores e comportamentos éticos na oraganização.')    
         with c2:
-            comprometimento = st.radio('',[1,2,3,4,5], key='comprometimento', horizontal=True)
+            st.session_state['comprometimento'] = st.radio('',[1,2,3,4,5], key='comprometimento', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
             st.write('**Programa de integridade**')
             st.write('Todos os envolvidos conhecem e prezam pelo Programa de Integridade da Marinha do Brasil.')    
         with c2:
-            integridade = st.radio('',[1,2,3,4,5], key='integridade', horizontal=True)
+            st.session_state['integridade'] = st.radio('',[1,2,3,4,5], key='integridade', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2,c3=st.columns([1,10,1])
         with c1:
@@ -360,52 +360,52 @@ def formulario():
 def relatorio():
     RELACIONAL={	
     'Conduta Ética':st.session_state['conduta_etica'],
-    'Transmissão de conhecimentos e experiências via rede':'transmissao_conhecimento',
-    'Comunicação':'comunicacao',
-    'Práticas de Integração':'praticas_integracao',
-    'Integração entre setores':'integracao_setores',
-    'Programa de integração com organizações participantes':'programa_integracao',
-    'Comprometimento de todos os valores e comportamentos éticos na organização':'comprometimento',
-    'Programa de Integridade':'integridade'
+    'Transmissão de conhecimentos e experiências via rede':st.session_state['transmissao_conhecimento'],
+    'Comunicação':st.session_state['comunicacao'],
+    'Práticas de Integração':st.session_state['praticas_integracao'],
+    'Integração entre setores':st.session_state['integracao_setores'],
+    'Programa de integração com organizações participantes':st.session_state['programa_integracao'],
+    'Comprometimento de todos os valores e comportamentos éticos na organização':st.session_state['comprometimento'],
+    'Programa de Integridade':st.session_state['integridade']
     }
     relacional = pd.DataFrame(RELACIONAL)
-    '''
+    
     ORGANIZACIONAL={
-    'Ambiente propício (disseminação de conhecimento)':ambiente_propicio,
-    'Infraestrutura física e de processo':infraestrutura,
-    'Lideranças Formalmente estabelecidas (impulsionadores da rede)':lideranca,
-    'Estrutura de Comunicação estabelecida':estrutura_comunicacao,
-    'Design (TMFT = Regimento interno)':design,
-    'Alinhamento objetivos estratégicos':alinhamento,
-    'Normas e valores comunicados':normas,
-    'Estrutura de papéis e responsabilidades':estrutura
+    'Ambiente propício (disseminação de conhecimento)':st.session_state['ambiente_propicio'],
+    'Infraestrutura física e de processo':st.session_state['infraestrutura'],
+    'Lideranças Formalmente estabelecidas (impulsionadores da rede)':st.session_state['lideranca'],
+    'Estrutura de Comunicação estabelecida':st.session_state['estrutura_comunicacao'],
+    'Design (TMFT = Regimento interno)':st.session_state['design'],
+    'Alinhamento objetivos estratégicos':st.session_state['alinhamento'],
+    'Normas e valores comunicados':st.session_state['norma']',
+    'Estrutura de papéis e responsabilidades':st.session_state['estrutura']
     }
     organizacional=pd.DataFrame(ORGANIZACIONAL)
 
     HUMANA={
-    'Educação Formal':educacao,
-    'Treinamento continuado':treinamento,
-    'Perfil da tripulação: Aproveitamento de conhecimentos e Experiências':perfil,
-    'Formação dos Instrutores Internos':formacao,
-    'Programa de desenvolvimento de Liderança':programa,
-    'Preocupação com aspectos motivacionais':preocupacao,
-    'Estímulos à criatividade':estimulos,
-    'Incentivo ao comprometimento':incentivo
+    'Educação Formal':st.session_state['educacao'],
+    'Treinamento continuado':st.session_state['treinamento'],
+    'Perfil da tripulação: Aproveitamento de conhecimentos e Experiências':st.session_state['perfil'],
+    'Formação dos Instrutores Internos':st.session_state['formacao'],
+    'Programa de desenvolvimento de Liderança':st.session_state['programa'],
+    'Preocupação com aspectos motivacionais':st.session_state['preocupacao'],
+    'Estímulos à criatividade':st.session_state['estimulos'],
+    'Incentivo ao comprometimento':st.session_state['incentivo']
     }
     humana=pd.DataFrame(HUMANA)
 
     PROCESSUAL={
-    'Sistematização do conhecimento':sistematizacao,
-    'Práticas e processos de captação de pessoal (Mapa de competências)':praticas_competencia,
-    'Processo de codificação':processo_codificacao,
-    'Conhecimento institucionalizados e experiências codificadas':conhecimento,
-    'Programa de desenvolvimento de competências: Esforço em pesquisa e desenvolvimento':programa_competencia,
-    'Uso de TIC para a gestão do conhecimento':tic,
-    'Gestão Documental':gestao_doc,
-    'Mapeamento de Processos':mapeamento
+    'Sistematização do conhecimento':st.session_state['sistematizacao'],
+    'Práticas e processos de captação de pessoal (Mapa de competências)':st.session_state['praticas_competencia'],
+    'Processo de codificação':st.session_state['processo_codificacao'],
+    'Conhecimento institucionalizados e experiências codificadas':st.session_state['conhecimento'],
+    'Programa de desenvolvimento de competências: Esforço em pesquisa e desenvolvimento':st.session_state['programa_competencia'],
+    'Uso de TIC para a gestão do conhecimento':st.session_state['tic'],
+    'Gestão Documental':st.session_state['gestao_doc'],
+    'Mapeamento de Processos':st.session_state['mapeamento']
     }
     processual=pd.DataFrame(PROCESSUAL)
-    '''
+    
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
     st.table(relacional)
         
