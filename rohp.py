@@ -408,17 +408,17 @@ def relatorio():
         st.write(styler.to_html(),unsafe_allow_html=True)
     with col2:
         styler2= organizacional.style.hide_index()
-        st.write(styler.to_html(),unsafe_allow_html=True)
+        st.write(styler2.to_html(),unsafe_allow_html=True)
 
     st.write('###')
     st.write('###')
     col3,col4=st.columns(2)
     with col3:
         styler3= humana.style.hide_index()
-        st.write(styler.to_html(),unsafe_allow_html=True)
+        st.write(styler3.to_html(),unsafe_allow_html=True)
     with col4:
         styler4= processual.style.hide_index()
-        st.write(styler.to_html(),unsafe_allow_html=True)
+        st.write(styler4.to_html(),unsafe_allow_html=True)
         
    
 try:
