@@ -359,17 +359,12 @@ def formulario():
 
 def relatorio():
     RELACIONAL={	
-    'Conduta Ética':st.session_state['conduta_etica'],
-    'Transmissão de conhecimentos e experiências via rede':st.session_state['transmissao_conhecimento'],
-    'Comunicação':st.session_state['comunicacao'],
-    'Práticas de Integração':st.session_state['praticas_integracao'],
-    'Integração entre setores':st.session_state['integracao_setores'],
-    'Programa de integração com organizações participantes':st.session_state['programa_integracao'],
-    'Comprometimento de todos os valores e comportamentos éticos na organização':st.session_state['comprometimento'],
-    'Programa de Integridade':st.session_state['integridade']
-    }
+        coluna1:['Conduta Ética','Transmissão de conhecimentos e experiências via rede','Comunicação','Práticas de Integração', 'Integração entre setores', 
+        'Programa de integração com organizações participantes', 'Comprometimento de todos os valores e comportamentos éticos na organização', 'Programa de Integridade']
+        coluna2:[st.session_state['conduta_etica'],st.session_state['transmissao_conhecimento'],st.session_state['comunicacao'],st.session_state['praticas_integracao'],
+        st.session_state['integracao_setores'],st.session_state['programa_integracao'],st.session_state['comprometimento'],st.session_state['integridade']]}
     relacional = pd.DataFrame(RELACIONAL)
-    
+    '''
     ORGANIZACIONAL={
     'Ambiente propício (disseminação de conhecimento)':st.session_state['ambiente_propicio'],
     'Infraestrutura física e de processo':st.session_state['infraestrutura'],
@@ -405,7 +400,7 @@ def relatorio():
     'Mapeamento de Processos':st.session_state['mapeamento']
     }
     processual=pd.DataFrame(PROCESSUAL)
-    
+    '''
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
     st.table(relacional)
         
