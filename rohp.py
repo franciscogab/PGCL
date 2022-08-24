@@ -364,6 +364,7 @@ def relatorio():
        ,'Notas':[st.session_state['conduta_etica'],st.session_state['transmissao_conhecimento'],st.session_state['comunicacao'],st.session_state['praticas_integracao'],
         st.session_state['integracao_setores'],st.session_state['programa_integracao'],st.session_state['comprometimento'],st.session_state['integridade']]}
     relacional = pd.DataFrame(RELACIONAL)
+    relacional['TOTAL'] = relacional.Notas.sum()
     
     ORGANIZACIONAL={
         'Dimensão Organizacional':['Ambiente propício (disseminação de conhecimento)','Infraestrutura física e de processo',
