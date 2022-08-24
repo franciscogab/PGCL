@@ -365,7 +365,9 @@ def relatorio():
         <caption>Relacional</caption>
         <tbody><tr>
         <th>Conduta Ética</th>
-        <td>{conduta_etica}</td></tr>''')
+        <td>{conduta_etica}</td></tr></tbody></table>''', unsafe_allow_html=True)
+    with col2:
+        st.write()
    
 try:
     if st.session_state['pagina_atual']=='diagnostico':
