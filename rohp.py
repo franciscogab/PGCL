@@ -368,6 +368,8 @@ try:
         processual()
     elif st.session_state['pagina_atual']=='principal':
         principal()
+    elif st.session_state['pagina_atual']=='formulario':
+        formulario()
 except Exception as err:
     #st.write(err)
     principal()
