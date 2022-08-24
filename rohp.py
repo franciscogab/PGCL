@@ -404,7 +404,7 @@ def relatorio():
         st.markdown('''
         <style>
         table{background:#ccffff}        
-        .row8 {
+        table tbody tr td .row8 {
         font-weight:bold
         background:#f5f5f5}
         </style>''', unsafe_allow_html=True)
