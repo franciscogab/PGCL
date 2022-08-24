@@ -91,9 +91,12 @@ def diagnostico():
         with c3:
             avancar = st.form_submit_button('Avançar')
         if avancar: 
-            organizacional()
+            st.session_state['pagina_atual']='organizacional'
+            st.experimental_rerun()
         elif voltar:
-            principal()            
+            st.session_state['pagina_atual']='principal'
+            st.experimental_rerun()
+            
          
         
 def organizacional():
@@ -167,9 +170,13 @@ def organizacional():
         with c3:
             avancar = st.form_submit_button('Avançar')
         if avancar: 
-            humana()
+            st.session_state['pagina_atual']='humana'
+            st.experimental_rerun()
+
         elif voltar:
-            diagnostico() 
+            st.session_state['pagina_atual']='diagnostico'
+            st.experimental_rerun()
+ 
 
 def humana():
     st.title('Diagnóstico')
@@ -242,9 +249,12 @@ def humana():
         with c3:
             avancar = st.form_submit_button('Avançar')
         if avancar: 
-            processual()
+            st.session_state['pagina_atual']='processual'
+            st.experimental_rerun()
         elif voltar:
-            organizacional() 
+            st.session_state['pagina_atual']='organizacional'
+            st.experimental_rerun()
+ 
 
 def processual():
     st.title('Diagnóstico')
@@ -317,9 +327,12 @@ def processual():
         with c3:
             avancar = st.form_submit_button('Avançar')
         if avancar: 
-            relatorio()
+            st.session_state['pagina_atual']='relatorio'
+            st.experimental_rerun()
         elif voltar:
-            humana() 
+            st.session_state['pagina_atual']='humana'
+            st.experimental_rerun()
+ 
 
 def relatorio():
     pass
