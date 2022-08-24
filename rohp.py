@@ -401,6 +401,7 @@ def relatorio():
     col1,col2=st.columns(2)
     with col1:
         styler= relacional.style.hide_index()
+        styler.highlight_between(styler.Notas, 'red', axis=1, left=1, right=2, inclusive='both')
         st.markdown('''
         <style>
         #T_2d83c {background:#ccffff}        
@@ -411,7 +412,6 @@ def relatorio():
         st.write(styler.to_html(),unsafe_allow_html=True)
     with col2:
         styler2= organizacional.style.hide_index()
-        
         st.write(styler2.to_html(),unsafe_allow_html=True)
 
     st.write('###')
@@ -419,11 +419,9 @@ def relatorio():
     col3,col4=st.columns(2)
     with col3:
         styler3= humana.style.hide_index()
-       
         st.write(styler3.to_html(),unsafe_allow_html=True)
     with col4:
         styler4= processual.style.hide_index()
-        
         st.write(styler4.to_html(),unsafe_allow_html=True)
         
    
