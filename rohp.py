@@ -403,7 +403,7 @@ def relatorio():
         styler= relacional.style.hide_index()
         st.markdown('''
         <style>
-        table{background:#ccffff}        
+        #T_2d83c {background:#ccffff}        
         table tbody tr td .row8 {
         font-weight:bold
         background:#f5f5f5}
