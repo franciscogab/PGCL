@@ -402,8 +402,12 @@ def relatorio():
     processual=pd.DataFrame(PROCESSUAL)
     '''
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
-    styler= relacional.style.hide_index()
-    st.write(styler.to_html(),unsafe_allow_html=True)
+    col1,col2=st.columns(2)
+    with col1:
+        styler= relacional.style.hide_index()
+        st.write(styler.to_html(),unsafe_allow_html=True)
+    with col2:
+        st.write('teste')
         
    
 try:
