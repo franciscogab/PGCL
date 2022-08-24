@@ -359,9 +359,9 @@ def formulario():
 
 def relatorio():
     RELACIONAL={	
-        'coluna1':['Conduta Ética','Transmissão de conhecimentos e experiências via rede','Comunicação','Práticas de Integração', 'Integração entre setores', 
+        'Dimensão Relacional':['Conduta Ética','Transmissão de conhecimentos e experiências via rede','Comunicação','Práticas de Integração', 'Integração entre setores', 
         'Programa de integração com organizações participantes', 'Comprometimento de todos os valores e comportamentos éticos na organização', 'Programa de Integridade']
-       ,'coluna2':[st.session_state['conduta_etica'],st.session_state['transmissao_conhecimento'],st.session_state['comunicacao'],st.session_state['praticas_integracao'],
+       ,'Notas':[st.session_state['conduta_etica'],st.session_state['transmissao_conhecimento'],st.session_state['comunicacao'],st.session_state['praticas_integracao'],
         st.session_state['integracao_setores'],st.session_state['programa_integracao'],st.session_state['comprometimento'],st.session_state['integridade']]}
     relacional = pd.DataFrame(RELACIONAL)
     '''
