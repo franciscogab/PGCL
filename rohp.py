@@ -401,7 +401,7 @@ def relatorio():
     col1,col2=st.columns(2)
     with col1:
         styler= relacional.style.hide_index()
-        styler.highlight_between(styler.Notas, 'red', axis=1, left=1, right=2, inclusive='both')
+        styler.highlight_between(relacional.Notas, 'red', axis=1, left=1, right=2, inclusive='both')
         st.markdown('''
         <style>
         #T_2d83c {background:#ccffff}        
