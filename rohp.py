@@ -374,37 +374,37 @@ def relatorio():
         st.session_state['lideranca'],st.session_state['estrutura_comunicacao'],
         st.session_state['design'],st.session_state['alinhamento'],st.session_state['normas'],st.session_state['estrutura']]}
     organizacional=pd.DataFrame(ORGANIZACIONAL)
-    '''
+    
     HUMANA={
-    'Educação Formal':st.session_state['educacao'],
-    'Treinamento continuado':st.session_state['treinamento'],
-    'Perfil da tripulação: Aproveitamento de conhecimentos e Experiências':st.session_state['perfil'],
-    'Formação dos Instrutores Internos':st.session_state['formacao'],
-    'Programa de desenvolvimento de Liderança':st.session_state['programa'],
-    'Preocupação com aspectos motivacionais':st.session_state['preocupacao'],
-    'Estímulos à criatividade':st.session_state['estimulos'],
-    'Incentivo ao comprometimento':st.session_state['incentivo']
-    }
+        'Dimensão Humana':['Educação Formal', 'Treinamento continuado', 'Perfil da tripulação: Aproveitamento de conhecimentos e Experiências', 
+        'Formação dos Instrutores Internos', 'Programa de desenvolvimento de Liderança', 'Preocupação com aspectos motivacionais', 
+        'Estímulos à criatividade', 'Incentivo ao comprometimento'],
+        'Notas':[st.session_state['educacao'],st.session_state['treinamento'],st.session_state['perfil'],
+        st.session_state['formacao'], st.session_state['programa'], st.session_state['preocupacao'],
+        st.session_state['estimulos'], st.session_state['incentivo']]}
     humana=pd.DataFrame(HUMANA)
 
     PROCESSUAL={
-    'Sistematização do conhecimento':st.session_state['sistematizacao'],
-    'Práticas e processos de captação de pessoal (Mapa de competências)':st.session_state['praticas_competencia'],
-    'Processo de codificação':st.session_state['processo_codificacao'],
-    'Conhecimento institucionalizados e experiências codificadas':st.session_state['conhecimento'],
-    'Programa de desenvolvimento de competências: Esforço em pesquisa e desenvolvimento':st.session_state['programa_competencia'],
-    'Uso de TIC para a gestão do conhecimento':st.session_state['tic'],
-    'Gestão Documental':st.session_state['gestao_doc'],
-    'Mapeamento de Processos':st.session_state['mapeamento']
-    }
+        'Dimensão Processual':['Sistematização do conhecimento', 'Práticas e processos de captação de pessoal (Mapa de competências)',
+        'Processo de codificação', 'Conhecimento institucionalizados e experiências codificadas', 'Programa de desenvolvimento de competências: Esforço em pesquisa e desenvolvimento'
+        'Gestão Documental', 'Mapeamento de Processos'],
+        'Notas':[st.session_state['sistematizacao'],st.session_state['praticas_competencia'],st.session_state['processo_codificacao'],
+        st.session_state['conhecimento'],st.session_state['programa_competencia'],st.session_state['tic'],
+        st.session_state['gestao_doc'],st.session_state['mapeamento']]}
     processual=pd.DataFrame(PROCESSUAL)
-    '''
+    
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
     col1,col2=st.columns(2)
     with col1:
         styler= relacional.style.hide_index()
         st.write(styler.to_html(),unsafe_allow_html=True)
     with col2:
+        st.write('teste')
+    col3,col4=st.columns(2)
+    with col3:
+        styler= relacional.style.hide_index()
+        st.write(styler.to_html(),unsafe_allow_html=True)
+    with col4:
         st.write('teste')
         
    
