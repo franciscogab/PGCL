@@ -399,13 +399,15 @@ def relatorio():
         styler= relacional.style.hide_index()
         st.write(styler.to_html(),unsafe_allow_html=True)
     with col2:
-        st.write('teste')
+        styler= relacional.style.hide_index()
+        st.write(styler.to_html(),unsafe_allow_html=True)
     col3,col4=st.columns(2)
     with col3:
         styler= relacional.style.hide_index()
         st.write(styler.to_html(),unsafe_allow_html=True)
     with col4:
-        st.write('teste')
+        styler= relacional.style.hide_index()
+        st.write(styler.to_html(),unsafe_allow_html=True)
         
    
 try:
