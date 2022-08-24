@@ -2,6 +2,7 @@ import streamlit as st
 from utilidades import nav_page
 
 st.set_page_config(layout='wide')
+st.session_state['pagina_atual']='principal'
 
 def principal():
     st.title('Matriz ROHP')
