@@ -360,13 +360,13 @@ def formulario():
 def relatorio():
     RELACIONAL={	
     'Conduta Ética':st.session_state['conduta_etica'],
-    'Transmissão de conhecimentos e experiências via rede':transmissao_conhecimento,
-    'Comunicação':comunicacao,
-    'Práticas de Integração':praticas_integracao,
-    'Integração entre setores':integracao_setores,
-    'Programa de integração com organizações participantes':programa_integracao,
-    'Comprometimento de todos os valores e comportamentos éticos na organização':comprometimento,
-    'Programa de Integridade':integridade
+    'Transmissão de conhecimentos e experiências via rede':'transmissao_conhecimento',
+    'Comunicação':'comunicacao',
+    'Práticas de Integração':'praticas_integracao',
+    'Integração entre setores':'integracao_setores',
+    'Programa de integração com organizações participantes':'programa_integracao',
+    'Comprometimento de todos os valores e comportamentos éticos na organização':'comprometimento',
+    'Programa de Integridade':'integridade'
     }
     relacional = pd.DataFrame(RELACIONAL)
     '''
