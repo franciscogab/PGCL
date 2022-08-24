@@ -46,7 +46,7 @@ def diagnostico():
             st.write('**Comunicação**')
             st.write('A comunicação entre os servidores do setor, bem como das demais áreas interessadas ocorre sem falhas e de forma objetiva.')    
         with c2:
-            st.session_state['comunicacao'] = st.radio('',[1,2,3,4,5], key='comunicacao', horizontal=True)
+            st.session_state['comunicacao'] = st.radio('',[1,2,3,4,5], key='comunicacao_entre', horizontal=True)
         st.markdown('<hr>', unsafe_allow_html=True)
         c1,c2 = st.columns([6,2])
         with c1:
