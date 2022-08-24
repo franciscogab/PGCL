@@ -397,6 +397,13 @@ def relatorio():
     col1,col2=st.columns(2)
     with col1:
         styler= relacional.style.hide_index()
+        st.markdown('''
+        <style>
+        table{background:#99ffff}        
+        tbody tr:last-child{
+        font-weight:bold
+        background:#f5f5f5}
+        </style>''', unsafe_allow_html=True)
         st.write(styler.to_html(),unsafe_allow_html=True)
     with col2:
         styler2= organizacional.style.hide_index()
