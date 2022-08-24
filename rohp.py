@@ -1,5 +1,5 @@
 import streamlit as st
-from utilidades import nav_page
+import pandas as pd
 
 st.set_page_config(layout='wide')
 
@@ -358,16 +358,57 @@ def formulario():
 
 
 def relatorio():
+    RELACIONAL={	
+    'Conduta Ética':conduta_etica,
+    'Transmissão de conhecimentos e experiências via rede':transmissao_conhecimento,
+    'Comunicação':comunicacao,
+    'Práticas de Integração':praticas_integracao,
+    'Integração entre setores':integracao_setores,
+    'Programa de integração com organizações participantes':programa_integracao,
+    'Comprometimento de todos os valores e comportamentos éticos na organização':comprometimento,
+    'Programa de Integridade':integridade
+    }
+    relacional=pd.DataFrame(RELACIONAL)
+
+    ORGANIZACIONAL={
+    'Ambiente propício (disseminação de conhecimento)':ambiente_propicio,
+    'Infraestrutura física e de processo':infraestrutura,
+    'Lideranças Formalmente estabelecidas (impulsionadores da rede)':lideranca,
+    'Estrutura de Comunicação estabelecida':estrutura_comunicacao,
+    'Design (TMFT = Regimento interno)':design,
+    'Alinhamento objetivos estratégicos':alinhamento,
+    'Normas e valores comunicados':normas,
+    'Estrutura de papéis e responsabilidades':estrutura
+    }
+    organizacional=pd.DataFrame(ORGANIZACIONAL)
+
+    HUMANA={
+    'Educação Formal':educacao,
+    'Treinamento continuado':treinamento,
+    'Perfil da tripulação: Aproveitamento de conhecimentos e Experiências':perfil,
+    'Formação dos Instrutores Internos':formacao,
+    'Programa de desenvolvimento de Liderança':programa,
+    'Preocupação com aspectos motivacionais':preocupacao,
+    'Estímulos à criatividade':estimulos,
+    'Incentivo ao comprometimento':incentivo
+    }
+    humana=pd.DataFrame(HUMANA)
+
+    PROCESSUAL={
+    'Sistematização do conhecimento':sistematizacao,
+    'Práticas e processos de captação de pessoal (Mapa de competências)':praticas_competencia,
+    'Processo de codificação':processo_codificacao,
+    'Conhecimento institucionalizados e experiências codificadas':conhecimento,
+    'Programa de desenvolvimento de competências: Esforço em pesquisa e desenvolvimento':programa_competencia,
+    'Uso de TIC para a gestão do conhecimento':tic,
+    'Gestão Documental':gestao_doc,
+    'Mapeamento de Processos':mapeamento
+    }
+    processual=pd.DataFrame(PROCESSUAL)
+
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
-    col1,col2=st.columns(2)
-    with col1:
-        st.markdown(f'''<table>
-        <caption>Relacional</caption>
-        <tbody><tr>
-        <th>Conduta Ética</th>
-        <td>{conduta_etica}</td></tr></tbody></table>''', unsafe_allow_html=True)
-    with col2:
-        st.write()
+    st.table(processual)
+        
    
 try:
     if st.session_state['pagina_atual']=='diagnostico':
