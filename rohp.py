@@ -497,9 +497,9 @@ def relatorio():
     with col1:
         st.markdown("<a href='https://franciscogab-pgcl-rohp-n7szap.streamlitapp.com/'><button style='display:block; margin-left:auto; margin-right:auto'>Novo Relatório</button></a>", unsafe_allow_html=True)
     with col2:
-        st.markdown("<a><button>PGCL</button></a>", unsafe_allow_html=True)
+        st.markdown("<a><button style='display:block; margin-left:auto; margin-right:auto'>PGCL</button></a>", unsafe_allow_html=True)
     with col3:
-        st.markdown("<a><button>Gerar Relatório</button></a>", unsafe_allow_html=True)
+        st.markdown("<a><button style='display:block; margin-left:auto; margin-right:auto'>Gerar Relatório</button></a>", unsafe_allow_html=True)
 
         
    
