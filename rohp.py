@@ -435,8 +435,7 @@ def relatorio():
         s = sumario.style.hide_index()
         st.write(s.to_html(), unsafe_allow_html=True)
         st.write('##')
-        st.write('Meta por dimensão')
-        metas_dimensao = st.selectbox('', list(range(1,41)))
+        metas_dimensao = st.selectbox('Meta por dimensão', list(range(1,41)))
 
         '''
         pd.DataFrame({'1':['Meta por dimensão'],'2':[st.session_state['meta']]})
