@@ -3,8 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
-from fpdf import FPDF
-import base64
 from plotly.subplots import make_subplots
 
 
@@ -506,8 +504,6 @@ def relatorio():
 
     st.write('##')
     st.write('##')
-
-    
     st.markdown("<a href='https://franciscogab-pgcl-rohp-n7szap.streamlitapp.com/'><button style='display:block; margin-left:auto; margin-right:auto'>Novo Relatório</button></a>", unsafe_allow_html=True)
         
 
