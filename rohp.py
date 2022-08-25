@@ -508,10 +508,10 @@ def relatorio():
 
     col1, col2, col3 = st.columns(3)
     with col3:
-        st.markdown('''<p>Emissão: {}<br>
-                    {}</p>
-                    <p>{}</p>
-                    <p>{}</p>'''.format(datetime.now().strftime('%d/%m/%Y'), st.session_state['nome'], st.session_state['posto'], st.session_state['funcao']), unsafe_allow_html=True)
+        st.markdown('''<p>Emissão: {}</p>
+                    <p>{}<br>
+                    {}<br>
+                    {}</p>'''.format(datetime.now().strftime('%d/%m/%Y'), st.session_state['nome'], st.session_state['posto'], st.session_state['funcao']), unsafe_allow_html=True)
 
     st.write('##')
     st.write('##')
