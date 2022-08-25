@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib
 import plotly.express as px
-from plotly.subplots import make_subplots
+import plotly.graph_objects as go
 
 
 st.set_page_config(layout='wide')
@@ -432,7 +432,7 @@ def relatorio():
         s = sumario.style.hide_index()
         st.write(s.to_html(), unsafe_allow_html=True)
     with col6:
-        fig = make_subplots(1,1)
+        fig = go.Figure()
         fig.add_trace(px.bar(x = sumario['Dimensão'], y = sumario['Soma']))
         fig.add_trace(px.line(x = sumario['Dimensão'], y= sumario['% do total']))
         st.plotly_chart(fig)
