@@ -7,7 +7,7 @@ from plotly.subplots import make_subplots
 
 
 
-st.set_page_config(layout='centered', page_icon='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2Fimage.png?alt=media&token=3bf4e428-fd29-47b3-9fc3-223fe66e8631')
+st.set_page_config(layout='wide', page_icon='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2Fimage.png?alt=media&token=3bf4e428-fd29-47b3-9fc3-223fe66e8631')
 
 def principal():
     st.markdown("<img src='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2FGRUPO%2007.png?alt=media&token=88307934-0c21-4e23-9b95-f8b8c0996242' alt='ROHP logo' style='display:block; margin-left:auto;margin-right:auto; width:100%'>", unsafe_allow_html=True)
@@ -17,9 +17,9 @@ def principal():
     st.write('##')
 
     col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        st.markdown("<a href='https://www.google.com'><img src='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2Fpgclnovo.png?alt=media&token=f1a8b5d3-6f22-4ac6-a758-98ee17f4125d' alt='PGCL' style='width:10em'></a>", unsafe_allow_html=True)
     with col2:
+        st.markdown("<a href='https://www.google.com'><img src='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2Fpgclnovo.png?alt=media&token=f1a8b5d3-6f22-4ac6-a758-98ee17f4125d' alt='PGCL' style='width:10em'></a>", unsafe_allow_html=True)
+    with col3:
         st.markdown("<a href='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Documentos%2FDIAGN%C3%93STICO%20GC.xlsx?alt=media&token=422c4fd4-5cac-4d09-a22a-1db3ed2a22bc'><img src='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2F20220825_105542_0000.png?alt=media&token=4a6f6087-4e2c-47d8-b4c5-dd67034f4e95' alt='download' style='width:10em'></a>", unsafe_allow_html=True)
     st.write('##')
 
