@@ -345,7 +345,7 @@ def formulario():
         nome = st.text_input('Nome Completo')
         posto = st.text_input('Posto/Graduação')
         funcao = st.text_input('Função')
-        meta = st.number_input('Meta por Dimensão', min_value=1, max_value=40, step=1, format='%d')
+        st.session_state['meta'] = st.number_input('Meta por Dimensão', min_value=1, max_value=40, step=1, format='%d')
         c1,c2,c3=st.columns([1,10,1])
         with c1:
             voltar = st.form_submit_button('Voltar')
@@ -424,7 +424,7 @@ def relatorio():
     
     st.write('##')
     st.markdown('<hr>', unsafe_allow_html=True)
-    
+
     col5, col6 = st.columns(2)
     with col5:
         sumario = pd.DataFrame({'Dimensão':['Relacional', 'Organizacional', 'Humana', 'Processual'],
@@ -433,7 +433,7 @@ def relatorio():
         s = sumario.style.hide_index()
         st.write(s.to_html(), unsafe_allow_html=True)
         st.write('##')
-        st.write(pd.DataFrame({'1':['Meta por dimensão'],'2':[meta]}).style.hide_index().hide_columns())
+        st.write(pd.DataFrame({'1':['Meta por dimensão'],'2':[st.session_state['meta']]}).style.hide_index().hide_columns())
     with col6:
         fig = go.Figure()
         fig.add_trace(px.bar(sumario, x='Dimensão', y='Soma'))
