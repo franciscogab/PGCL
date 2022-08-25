@@ -518,7 +518,7 @@ def relatorio():
     st.write('##')
     col1, col2 = st.columns(2)
     with col1:
-        voltar:
+        if voltar:
             st.session_state['pagina_atual']='formulario'
             st.experimental_rerun()
     with col2:
