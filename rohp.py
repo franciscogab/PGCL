@@ -25,7 +25,9 @@ def principal():
     \n5= Concordo Totalmente
     '''
     st.write('##')
-
+    col1, col2 = st.columns([8,4]):
+    with col1:
+        st.markdown(")
     if st.button('Iniciar diagnóstico'):
         st.session_state['pagina_atual']='diagnostico'
         st.experimental_rerun()
@@ -521,6 +523,7 @@ try:
         formulario()
     elif st.session_state['pagina_atual']=='relatorio':
         relatorio()
-except:
+except Exception as error:
+    st.write(error)
     principal()
 
