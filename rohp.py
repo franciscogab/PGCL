@@ -437,10 +437,13 @@ def relatorio():
         st.write('##')
         st.write(pd.DataFrame({'1':['Meta por dimensão'],'2':[st.session_state['meta']]}).style.hide_index().hide_columns())
     with col6:
-        fig, ax = plt.subplots()
-        ax.set_ylim([0,40])
-        plt.bar(sumario['Dimensão'], sumario['Soma'])
-        plt.plot(sumario['Dimensão'], sumario['% do total'])
+        fig, ax1 = plt.subplots()
+        ax1.set_ylim([0,40])
+        ax1.bar(sumario['Dimensão'], sumario['Soma'])
+        
+        ax2 = ax1.twinx()
+        ax2.plot(sumario['Dimensão'], sumario['% do total'])
+
         st.pyplot(fig)
         
    
