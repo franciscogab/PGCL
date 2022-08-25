@@ -413,10 +413,10 @@ def relatorio():
     st.write('###')
     col3,col4=st.columns(2)
     with col3:
-        styler3 = humana.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[humana.index.get_level_values(0)[:-1], 'Notas'])
+        styler3 = humana.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[humana.index.get_level_values(0)[:-1], 'Notas']).set_properties(subset=['Dimensão Humana'], **{'width': '95%'})
         st.write(styler3.to_html(),unsafe_allow_html=True)
     with col4:
-        styler4 = processual.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[processual.index.get_level_values(0)[:-1], 'Notas'])
+        styler4 = processual.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[processual.index.get_level_values(0)[:-1], 'Notas']).set_properties(subset=['Dimensão Processual'], **{'width': '95%'})
         st.write(styler4.to_html(),unsafe_allow_html=True)
         
    
