@@ -438,7 +438,7 @@ def relatorio():
         st.markdown('''
         <style>
         .row-widget .stSelectbox {
-            width:25%
+            width:100px
         }
         </style>
         ''', unsafe_allow_html=True)
