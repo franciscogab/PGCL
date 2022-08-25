@@ -442,7 +442,7 @@ def relatorio():
         ax1.bar(sumario['Dimensão'], sumario['Soma'])
         
         ax2 = ax1.twinx()
-        ax2.plot(sumario['Dimensão'], sumario['% do total'])
+        ax2.plot(sumario['Dimensão'], sumario['% do total'], color='tab:red')
 
         st.pyplot(fig)
         
