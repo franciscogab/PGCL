@@ -16,7 +16,11 @@ def principal():
     st.write('''A Matriz ROHP é uma ferramenta que realizará o diagnóstico de sua organização/setor, a fim de identificar qual é o seu grau de maturidade em Gestão de Conhecimento (GC) e, assim, definir seu planejamento para implementar ou aperfeiçoar a GC.''')
     st.write('##')
 
-    st.markdown("<a href='https://www.google.com'><img src='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2Fpgclnovo.png?alt=media&token=f1a8b5d3-6f22-4ac6-a758-98ee17f4125d' alt='PGCL' style='width:10em'></a>", unsafe_allow_html=True)
+    col1, col2 = st.column(2)
+    with col1:
+        st.markdown("<a href='https://www.google.com'><img src='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2Fpgclnovo.png?alt=media&token=f1a8b5d3-6f22-4ac6-a758-98ee17f4125d' alt='PGCL' style='width:10em'></a>", unsafe_allow_html=True)
+    with col2:
+        st.markdown("<a href='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Documentos%2FDIAGN%C3%93STICO%20GC.xlsx?alt=media&token=422c4fd4-5cac-4d09-a22a-1db3ed2a22bc'><img src='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2F20220825_105542_0000.png?alt=media&token=4a6f6087-4e2c-47d8-b4c5-dd67034f4e95' alt='download' style='width:10em'></a>", unsafe_allow_html=True)
     st.write('##')
 
     st.subheader('Instruções para preenchimento')
