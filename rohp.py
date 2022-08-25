@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
+from datetime import datetime
 from plotly.subplots import make_subplots
 
 
@@ -357,9 +358,9 @@ def formulario():
     st.title('Formulário')
     with st.form('form'):
         st.session_state['om'] = st.text_input('OM', value='')
-        nome = st.text_input('Nome Completo', value='')
-        posto = st.text_input('Posto/Graduação')
-        funcao = st.text_input('Função')
+        st.session_state['nome'] = st.text_input('Nome Completo', value='')
+        st.session_state['posto'] = st.text_input('Posto/Graduação')
+        st.session_state['funcao'] = st.text_input('Função')
         c1,c2,c3=st.columns([1,10,1])
         with c1:
             voltar = st.form_submit_button('Voltar')
@@ -501,6 +502,16 @@ def relatorio():
         niveis = niveis.style.hide_index()
         niveis.set_properties(**{'background-color':'#e0ffff'})
         st.markdown(niveis.to_html(), unsafe_allow_html=True)
+
+    st.write('##')
+    st.write('##')
+
+    col1, col2, col3 = st.columns(3)
+    with col3:
+        st.markdown('''<p>Emissão: {}</p>
+                    <p>{}</p>
+                    <p>{}</p>
+                    <p>{}</p>'''.format(datetime.now().strf('%d/%m%/%Y'), st.session_state['nome'], st.session_state['posto'], st.session_state['funcao']), unsafe_allow)html=True)
 
     st.write('##')
     st.write('##')
