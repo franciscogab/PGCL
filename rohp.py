@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib
 import plotly.express as px
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
 
 
 st.set_page_config(layout='wide')
@@ -436,8 +438,8 @@ def relatorio():
         st.write(pd.DataFrame({'1':['Meta por dimensão'],'2':[st.session_state['meta']]}).style.hide_index().hide_columns())
     with col6:
         fig = go.Figure()
-        fig.add_trace(px.bar(sumario, x='Dimensão', y='Soma'))
-        fig.add_trace(px.line(sumario, x='Dimensão', y='% do total'))
+        fig.add_trace([px.bar(sumario, x='Dimensão', y='Soma'),px.line(sumario, x='Dimensão', y='% do total')])
+
         st.plotly_chart(fig)
         
    
