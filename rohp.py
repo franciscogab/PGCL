@@ -405,7 +405,7 @@ def relatorio():
     
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
 
-    st.markdown("<img src='franciscogab/PGCL/rohp_logo.png' alt='ROHP logo' style='text-align:center'>")
+    st.markdown("<img src='franciscogab/PGCL/rohp_logo.png' alt='ROHP logo' style='text-align:center'>", unsafe_allow_html=True)
 
     col1,col2=st.columns(2)
     with col1:
