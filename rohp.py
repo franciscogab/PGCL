@@ -490,6 +490,14 @@ def relatorio():
         niveis.set_properties(**{'background-color':'#e0ffff'})
         st.markdown(niveis.to_html(), unsafe_allow_html=True)
 
+    col1, col2, col3= st.columns([4,4,4])
+    with col1:
+        st.markdown("<a href='https://franciscogab-pgcl-rohp-n7szap.streamlitapp.com/'><button>Novo Relatório</button></a>", unsafe_allow_html=True)
+    with col2:
+        st.markdown("<a><button>PGCL</button></a>", unsafe_allow_html=True)
+    with col3:
+        st.markdown("<a><button>Gerar Relatório</button></a>", unsafe_allow_html=True)
+
         
    
 try:
