@@ -403,7 +403,6 @@ def relatorio():
     with col1:
         styler= relacional.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[relacional.index.get_level_values(0)[:-1], 'Notas'])
 
-
         st.markdown('''
         <style>
         #T_2d83c {background:#ccffff}        
@@ -413,7 +412,7 @@ def relatorio():
         </style>''', unsafe_allow_html=True)
         st.write(styler.to_html(),unsafe_allow_html=True)
     with col2:
-        styler2= organizacional.style.hide_index()
+        styler2= relacional.reset_index(drop=True).style.hide_index().background_gradient(cmap='Greens', subset=pd.IndexSlice[organizacional.index.get_level_values(0)[:-1], 'Notas'])
         st.write(styler2.to_html(),unsafe_allow_html=True)
 
     st.write('###')
