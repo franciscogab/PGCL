@@ -443,6 +443,7 @@ def relatorio():
         m = m.hide_columns()
         st.write(m.to_html(), unsafe_allow_html=True)'''
     with col6:
+        plt.rcParams['font.family'] = 'sans-serif'
         fig, ax1 = plt.subplots()
         ax1.set_ylim([0,40])
         ax1.bar(sumario['Dimensão'], sumario['Soma'])
