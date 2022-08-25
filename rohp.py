@@ -401,7 +401,8 @@ def relatorio():
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
     col1,col2=st.columns(2)
     with col1:
-        styler= relacional.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset='Notas')
+        styler= relacional.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', axis=0,subset=[:-1])
+
 
         st.markdown('''
         <style>
