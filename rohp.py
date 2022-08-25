@@ -478,6 +478,7 @@ def relatorio():
 
         maturidade={'Nível de Maturidade':[f'Nível {nivel_pontos[0]}: {nivel_pontos[1]}', total_pontos]}
         maturidade = pd.DataFrame(maturidade)
+        maturidade = maturidade.style.hide_index()
         st.markdown(maturidade.to_html, unsafe_allow_html=True)
 
     with col2:
