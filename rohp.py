@@ -412,7 +412,7 @@ def relatorio():
     st.write('###')
     col3,col4=st.columns(2)
     with col3:
-        styler3= humana.style.hide_index()
+        styler2 = humana.reset_index(drop=True).style.hide_index().background_gradient(cmap='BuPu', subset=pd.IndexSlice[humana.index.get_level_values(0)[:-1], 'Notas'])
         st.write(styler3.to_html(),unsafe_allow_html=True)
     with col4:
         styler4= processual.style.hide_index()
