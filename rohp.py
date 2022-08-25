@@ -404,6 +404,9 @@ def relatorio():
     processual = pd.concat([processual, pd.DataFrame({'Dimensão Processual':['TOTAL'], 'Notas':[processual.Notas.sum()]})], axis = 0)
     
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
+
+    st.markdown("<img src='franciscogab/PGCL/rohp_logo.png' alt='ROHP logo' style='text-align:center'>")
+
     col1,col2=st.columns(2)
     with col1:
         styler= relacional.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[relacional.index.get_level_values(0)[:-1], 'Notas']).set_properties(subset=['Dimensão Relacional'], **{'width': '95%'})
