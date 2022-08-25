@@ -440,6 +440,7 @@ def relatorio():
         .row-widget .stSelectbox {
             width:25%
         }
+        </style>
         ''', unsafe_allow_html=True)
         metas_dimensao = st.selectbox('Meta por dimensão', list(range(1,41)))
         '''
