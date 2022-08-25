@@ -419,11 +419,13 @@ def relatorio():
         styler4 = processual.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[processual.index.get_level_values(0)[:-1], 'Notas']).set_properties(subset=['Dimensão Processual'], **{'width': '95%'})
         st.write(styler4.to_html(),unsafe_allow_html=True)
     
+    st.write('##')
+    
     col5, col6 = st.columns(2)
     with col5:
-        sumario = pd.DataFrame({'Dimensões':['Dimensão Relacional', 'Dimensão Organizacional', 'Dimensão Humana', 'Dimensão Processual'],
+        sumario = pd.DataFrame({'Dimensão':['Relacional', 'Organizacional', 'Humana', 'Processual'],
         'Soma':[relacional.Notas[:-1].sum(), organizacional.Notas[:-1].sum(), humana.Notas[:-1].sum(), processual.Notas[:-1].sum()],
-        '':[relacional.Notas[:-1].sum()/40, organizacional.Notas[:-1].sum()/40, humana.Notas[:-1].sum()/40, processual.Notas[:-1].sum()/40]})
+        '% do total':['{:.2f}%'.format(100*relacional.Notas[:-1].sum()/40), organizacional.Notas[:-1].sum()/40, humana.Notas[:-1].sum()/40, processual.Notas[:-1].sum()/40]})
         s = sumario.style.hide_index()
         st.write(s.to_html(), unsafe_allow_html=True)
     with col6:
