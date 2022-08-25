@@ -443,7 +443,7 @@ def relatorio():
         fig, ax1 = plt.subplots()
         ax1.set_ylim([0,40])
         ax1.bar(sumario['Dimensão'], sumario['Soma'])
-        ax1.plot(sumario['Dimensão'], [st.session_state['meta']]*4)
+        ax1.plot(sumario['Dimensão'], [st.session_state['meta']]*4, color='tab:black')
         
         ax2 = ax1.twinx()
         ax2.plot(sumario['Dimensão'], sumario['% do total'], color='tab:red')
