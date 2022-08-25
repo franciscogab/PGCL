@@ -451,6 +451,8 @@ def relatorio():
         
         ax2 = ax1.twinx()
         ax2.set_ylim([0,100])
+        ax2.set_yticks(20,40,60,80,100)
+        ax2.set_ytickslabel('20%','40%','60%','80%','100%')
         ax2.plot(sumario['Dimensão'], [float(i[:-1]) for i in  sumario['% do total']], color='tab:red')
 
         ax1.grid(axis = 'y')
