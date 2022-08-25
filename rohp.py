@@ -406,7 +406,7 @@ def relatorio():
 
         st.write(styler.to_html(),unsafe_allow_html=True)
     with col2:
-        styler2 = organizacional.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[organizacional.index.get_level_values(0)[:-1], 'Notas'])
+        styler2 = organizacional.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[organizacional.index.get_level_values(0)[:-1], 'Notas']).set_properties(subset=['Dimensão Organizacional'], **{'width': '95%'})
         st.write(styler2.to_html(),unsafe_allow_html=True)
 
     st.write('###')
