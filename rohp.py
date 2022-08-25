@@ -479,6 +479,7 @@ def relatorio():
         maturidade={'Nível de Maturidade da Organização':[f'Nível {nivel_pontos[0]}: {nivel_pontos[1]}', f'Soma das dimensões: {total_pontos}']}
         maturidade = pd.DataFrame(maturidade)
         maturidade = maturidade.style.hide_index()
+        maturidade.set_properties(**{'width':'100%'})
         st.markdown(maturidade.to_html(), unsafe_allow_html=True)
 
     with col2:
