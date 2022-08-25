@@ -435,7 +435,9 @@ def relatorio():
         s = sumario.style.hide_index()
         st.write(s.to_html(), unsafe_allow_html=True)
         st.write('##')
-        st.write(pd.DataFrame({'1':['Meta por dimensão'],'2':[st.session_state['meta']]}).style.hide_index().hide_columns())
+        metas_dimensao = pd.DataFrame({'1':['Meta por dimensão'],'2':[st.session_state['meta']]})
+        m = metas_dimensao.style.hide_index()
+        st.write(m.to_html(), unsafe_allow_html=True)
     with col6:
         fig, ax1 = plt.subplots()
         ax1.set_ylim([0,40])
