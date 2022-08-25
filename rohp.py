@@ -405,17 +405,17 @@ def relatorio():
 
         st.write(styler.to_html(),unsafe_allow_html=True)
     with col2:
-        styler2 = organizacional.reset_index(drop=True).style.hide_index().background_gradient(cmap='Greens', subset=pd.IndexSlice[organizacional.index.get_level_values(0)[:-1], 'Notas'])
+        styler2 = organizacional.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[organizacional.index.get_level_values(0)[:-1], 'Notas'])
         st.write(styler2.to_html(),unsafe_allow_html=True)
 
     st.write('###')
     st.write('###')
     col3,col4=st.columns(2)
     with col3:
-        styler3 = humana.reset_index(drop=True).style.hide_index().background_gradient(cmap='BuPu', subset=pd.IndexSlice[humana.index.get_level_values(0)[:-1], 'Notas'])
+        styler3 = humana.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[humana.index.get_level_values(0)[:-1], 'Notas'])
         st.write(styler3.to_html(),unsafe_allow_html=True)
     with col4:
-        styler4 = processual.reset_index(drop=True).style.hide_index().background_gradient(cmap='Reds', subset=pd.IndexSlice[processual.index.get_level_values(0)[:-1], 'Notas'])
+        styler4 = processual.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[processual.index.get_level_values(0)[:-1], 'Notas'])
         st.write(styler4.to_html(),unsafe_allow_html=True)
         
    
