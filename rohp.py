@@ -25,7 +25,7 @@ def principal():
     \n5= Concordo Totalmente
     '''
     st.write('##')
-    col1, col2 = st.columns([8,4]):
+    col1, col2 = st.columns([8,4])
     with col1:
         st.markdown(")
     if st.button('Iniciar diagnóstico'):
