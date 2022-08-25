@@ -448,7 +448,7 @@ def relatorio():
         ax1.plot(sumario['Dimensão'], [metas_dimensao]*4, color='black')
         
         ax2 = ax1.twinx()
-        ax2.set_ylim([0,1])
+        ax2.set_ylim([0,100])
         ax2.plot(sumario['Dimensão'], [float(i[:-1]) for i in  sumario['% do total']], color='tab:red')
 
         st.pyplot(fig)
