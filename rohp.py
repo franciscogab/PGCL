@@ -405,7 +405,7 @@ def relatorio():
     
     st.markdown('<h1 style="text-align:center">Matriz ROHP</h1>', unsafe_allow_html=True)
 
-    st.markdown("<img src='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2FGRUPO%2007.png?alt=media&token=88307934-0c21-4e23-9b95-f8b8c0996242' alt='ROHP logo' style='text-align:center; width:50%'>", unsafe_allow_html=True)
+    st.markdown("<img src='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2FGRUPO%2007.png?alt=media&token=88307934-0c21-4e23-9b95-f8b8c0996242' alt='ROHP logo' style='display:block; margin-left:auto;margin-right:auto; width:100%'>", unsafe_allow_html=True)
 
     col1,col2=st.columns(2)
     with col1:
