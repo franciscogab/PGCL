@@ -422,7 +422,8 @@ def relatorio():
     col5, col6 = st.columns(2)
     with col5:
         sumario = pd.DataFrame({'Dimensões':['Dimensão Relacional', 'Dimensão Organizacional', 'Dimensão Humana', 'Dimensão Processual'],
-        'Soma':[relacional.Notas[:-1].sum(), organizacional.Notas[:-1].sum(), humana.Notas[:-1].sum(), processual.Notas[:-1].sum()]})
+        'Soma':[relacional.Notas[:-1].sum(), organizacional.Notas[:-1].sum(), humana.Notas[:-1].sum(), processual.Notas[:-1].sum()],
+        '':[relacional.Notas[:-1].sum()/40, organizacional.Notas[:-1].sum()/40, humana.Notas[:-1].sum()/40, processual.Notas[:-1].sum()/40]})
         s = sumario.style.hide_index()
         st.write(s.to_html(), unsafe_allow_html=True)
     with col6:
