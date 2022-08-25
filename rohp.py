@@ -491,6 +491,7 @@ def relatorio():
         st.markdown(niveis.to_html(), unsafe_allow_html=True)
 
     st.write('##')
+    st.write('##')
 
     col1, col2, col3= st.columns([4,4,4])
     with col1:
