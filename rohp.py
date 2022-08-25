@@ -423,7 +423,8 @@ def relatorio():
     with col5:
         sumario = pd.DataFrame({'Areas':['Dimensão Relacional', 'Dimensão Organizacional', 'Dimensão Humana', 'Dimensão Processual'],
         'Soma':[relacional.Notas[:-1].sum(), organizacional.Notas[:-1].sum(), humana.Notas[:-1].sum(), processual.Notas[:-1].sum()]})
-        st.write(sumario.to_html(), unsafe_allow_html=True)
+        s = sumario.style.hide_index()
+        st.write(s.to_html(), unsafe_allow_html=True)
     with col6:
         pass
         
