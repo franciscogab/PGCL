@@ -16,7 +16,7 @@ def principal():
     st.write('''A Matriz ROHP é uma ferramenta que realizará o diagnóstico de sua organização/setor, a fim de identificar qual é o seu grau de maturidade em Gestão de Conhecimento (GC) e, assim, definir seu planejamento para implementar ou aperfeiçoar a GC.''')
     st.write('##')
 
-    col1, col2 = st.columns(2)
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.markdown("<a href='https://www.google.com'><img src='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2Fpgclnovo.png?alt=media&token=f1a8b5d3-6f22-4ac6-a758-98ee17f4125d' alt='PGCL' style='width:10em'></a>", unsafe_allow_html=True)
     with col2:
