@@ -424,6 +424,7 @@ def relatorio():
     
     st.write('##')
     st.markdown('<hr>', unsafe_allow_html=True)
+    
     col5, col6 = st.columns(2)
     with col5:
         sumario = pd.DataFrame({'Dimensão':['Relacional', 'Organizacional', 'Humana', 'Processual'],
