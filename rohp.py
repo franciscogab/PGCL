@@ -343,8 +343,8 @@ def processual():
 def formulario():
     st.title('Formulário')
     with st.form('form'):
-        st.session_state['om'] = st.text_input('OM')
-        nome = st.text_input('Nome Completo')
+        st.session_state['om'] = st.text_input('OM', value='')
+        nome = st.text_input('Nome Completo', value='')
         posto = st.text_input('Posto/Graduação')
         funcao = st.text_input('Função')
         st.session_state['meta'] = st.number_input('Meta por Dimensão', min_value=1, max_value=40, step=1, format='%d')
@@ -462,6 +462,26 @@ def relatorio():
         st.pyplot(fig)
     
     st.markdown("<hr>", unsafe_allow_html=True)
+    col1, col2=st.columns(2)
+    with col1:
+        total_pontos = sumario.Soma.sum()
+        if total_pontos <= 63:
+            nivel_pontos = [1, 'Reação']
+        elif total_pontos <= 95:
+            nivel_pontos = [2,'Iniciação']
+        elif total_pontos <= 111:
+            nivel_pontos = [3,'Introdução']
+        elif total_pontos <= 143:
+            nivel_pontos = [4,'Refinamento']
+        else:
+            nivel_pontos = [5, 'Maturidade']
+
+        maturidade={'Nível de Maturidade':[f'Nível {total_pontos[0]}: {total_pontos[1]}', total_pontos]}
+        maturidade = pd.DataFrame(maturidade)
+        st.markdown(maturidade.to_html, unsafe_allow_html=True)
+
+    with col2:
+        pass
         
    
 try:
