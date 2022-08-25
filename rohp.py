@@ -440,6 +440,7 @@ def relatorio():
         fig, ax = plt.subplots()
         ax.set_ylim([0,40])
         plt.bar(sumario['Dimensão'], sumario['Soma'])
+        plt.plot(sumario['Dimensão'], sumario['% do total'])
         st.pyplot(fig)
         
    
