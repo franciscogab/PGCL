@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import matplotlib
+import plotly.express as px
+
 
 st.set_page_config(layout='wide')
 
@@ -429,7 +431,8 @@ def relatorio():
         s = sumario.style.hide_index()
         st.write(s.to_html(), unsafe_allow_html=True)
     with col6:
-        pass
+        fig = px.bar(data=sumario, x='Dimensão', y='Soma')
+        fig.show()
         
    
 try:
