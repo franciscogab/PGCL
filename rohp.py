@@ -476,7 +476,7 @@ def relatorio():
         else:
             nivel_pontos = [5, 'Maturidade']
 
-        maturidade={'Nível de Maturidade':[f'Nível {nivel_pontos[0]}: {nivel_pontos[1]}', total_pontos]}
+        maturidade={'Nível de Maturidade da Organização':[f'Nível {nivel_pontos[0]}: {nivel_pontos[1]}', f'Soma das dimensões: {total_pontos}']}
         maturidade = pd.DataFrame(maturidade)
         maturidade = maturidade.style.hide_index()
         st.markdown(maturidade.to_html(), unsafe_allow_html=True)
