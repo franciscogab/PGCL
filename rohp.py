@@ -508,8 +508,8 @@ def relatorio():
 
     col1, col2, col3 = st.columns(3)
     with col3:
-        st.markdown('''<p style='text-align:right'>Emissão: {}</p>
-                    <p style='text-align:center'>{}<br>
+        st.markdown('''<p style='text-align:right'>Emissão: {}</p><br>
+                    <p style='text-align:center; font-size:30px'>{}<br>
                     {}<br>
                     {}</p>'''.format(datetime.now().strftime('%d/%m/%Y'), st.session_state['nome'], st.session_state['posto'], st.session_state['funcao']), unsafe_allow_html=True)
 
