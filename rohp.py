@@ -504,7 +504,7 @@ def relatorio():
 
     st.write('##')
     st.write('##')
-    st.markdown("<a href='https://franciscogab-pgcl-rohp-n7szap.streamlitapp.com/'><button style='display:block; margin-left:auto; margin-right:auto'>Novo Relatório</button></a>", unsafe_allow_html=True)
+    st.markdown("<a href='https://franciscogab-pgcl-rohp-n7szap.streamlitapp.com/'><button class='css-1cpxqw2 edgvbvh9' style='display:block; margin-left:auto; margin-right:auto'>Novo Relatório</button></a>", unsafe_allow_html=True)
         
 
         
