@@ -8,7 +8,7 @@ from plotly.subplots import make_subplots
 
 
 st.set_page_config(layout='wide', page_icon='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2Fimage.png?alt=media&token=3bf4e428-fd29-47b3-9fc3-223fe66e8631')
-
+sd.markdown('<style>a{text-decoration:none;}</style>', unsafe_allow_html=True)
 def principal():
     st.markdown("<img src='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2FGRUPO%2007.png?alt=media&token=88307934-0c21-4e23-9b95-f8b8c0996242' alt='ROHP logo' style='display:block; margin-left:auto;margin-right:auto; width:100%'>", unsafe_allow_html=True)
     st.write('##')
