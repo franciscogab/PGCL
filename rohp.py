@@ -347,7 +347,6 @@ def formulario():
         nome = st.text_input('Nome Completo', value='')
         posto = st.text_input('Posto/Graduação')
         funcao = st.text_input('Função')
-        st.session_state['meta'] = st.number_input('Meta por Dimensão', min_value=1, max_value=40, step=1, format='%d')
         c1,c2,c3=st.columns([1,10,1])
         with c1:
             voltar = st.form_submit_button('Voltar')
@@ -518,7 +517,6 @@ try:
         formulario()
     elif st.session_state['pagina_atual']=='relatorio':
         relatorio()
-except Exception as err:
-    st.write(err)
+except:
     principal()
 
