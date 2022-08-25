@@ -437,8 +437,8 @@ def relatorio():
         st.write('##')
         st.write(pd.DataFrame({'1':['Meta por dimensão'],'2':[st.session_state['meta']]}).style.hide_index().hide_columns())
     with col6:
-        fig = plt.figure()
-        fig.set_ylim([0,40])
+        fig, ax = plt.subplots()
+        ax.set_ylim([0,40])
         plt.bar(sumario['Dimensão'], sumario['Soma'])
         st.pyplot(fig)
         
