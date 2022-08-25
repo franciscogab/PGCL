@@ -418,6 +418,14 @@ def relatorio():
     with col4:
         styler4 = processual.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[processual.index.get_level_values(0)[:-1], 'Notas']).set_properties(subset=['Dimensão Processual'], **{'width': '95%'})
         st.write(styler4.to_html(),unsafe_allow_html=True)
+    
+    col5, col6 = st.columns(2)
+    with col5:
+        sumario = pd.DataFrame({'Areas':['Dimensão Relacional', 'Dimensão Organizacional', 'Dimensão Humana', 'Dimensão Processual'],
+        'Soma':[relacional.Notas.sum(), organizacional.Notas.sum(), humana.Notas.sum(), processual.Notas.sum()]})
+        st.write(sumario.to_html, unsafe_allow_html=True)
+    with col6:
+        pass
         
    
 try:
