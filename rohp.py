@@ -432,6 +432,7 @@ def relatorio():
         st.write(s.to_html(), unsafe_allow_html=True)
     with col6:
         fig = px.bar(sumario, x='Dimensão', y='Soma')
+        fig.add_trace(px.line(sumario, x='Dimensão', y='% do total'))
         st.plotly_chart(fig)
         
    
