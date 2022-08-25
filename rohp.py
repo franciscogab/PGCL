@@ -483,7 +483,7 @@ def relatorio():
 
     with col2:
         st.write('Tabela de referência')
-        niveis = {'Níveis de referência':['Nível 5: Maturidade - A GC está consolidada no setor.', 'Nível 4: Refinamento - A implementação da GC é avaliada e melhorada continuamente.', 'Nível 3: Introdução - Existem práticas de GC.', 'Nível 2: Iniciação - O setor inicia o reconhecimento da importância do gerenciamento do conhecimento.', 'Nível 1: Reação - O setor não possui características e iniciativas que promovam a GC.',
+        niveis = {'Níveis de referência':['Nível 5: Maturidade - A GC está consolidada no setor.', 'Nível 4: Refinamento - A implementação da GC é avaliada e melhorada continuamente.', 'Nível 3: Introdução - Existem práticas de GC.', 'Nível 2: Iniciação - O setor inicia o reconhecimento da importância do gerenciamento do conhecimento.', 'Nível 1: Reação - O setor não possui características e iniciativas que promovam a GC.'],
         'Pontuação':['144 - 160', '112 - 143', '96 - 111','64 - 95', '32 - 63']}
         niveis = pd.DataFrame(niveis)
         niveis = niveis.style.hide_index()
