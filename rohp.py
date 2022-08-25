@@ -437,11 +437,6 @@ def relatorio():
         st.write('##')
         metas_dimensao = st.selectbox('Meta por dimensão', list(range(1,41)))
 
-        '''
-        pd.DataFrame({'1':['Meta por dimensão'],'2':[st.session_state['meta']]})
-        m = metas_dimensao.style.hide_index()
-        m = m.hide_columns()
-        st.write(m.to_html(), unsafe_allow_html=True)'''
     with col6:
         plt.rcParams['font.family'] = 'sans-serif'
         fig, ax1 = plt.subplots()
@@ -461,6 +456,8 @@ def relatorio():
         ax1.grid(axis = 'y')
 
         st.pyplot(fig)
+    
+    st.markdown("<hr>", unsafe_allow_html=True)
         
    
 try:
