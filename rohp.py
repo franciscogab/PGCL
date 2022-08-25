@@ -424,7 +424,7 @@ def relatorio():
     
     st.write('##')
     st.markdown('<hr>', unsafe_allow_html=True)
-    col5, col6 = st.columns(2)
+    '''col5, col6 = st.columns(2)
     with col5:
         sumario = pd.DataFrame({'Dimensão':['Relacional', 'Organizacional', 'Humana', 'Processual'],
         'Soma':[relacional.Notas[:-1].sum(), organizacional.Notas[:-1].sum(), humana.Notas[:-1].sum(), processual.Notas[:-1].sum()],
@@ -435,7 +435,7 @@ def relatorio():
         fig = go.Figure()
         fig.add_trace(px.bar(sumario, x='Dimensão', y='Soma'))
         fig.add_trace(px.line(sumario, x='Dimensão', y='% do total'))
-        st.plotly_chart(fig)
+        st.plotly_chart(fig)'''
         
    
 try:
