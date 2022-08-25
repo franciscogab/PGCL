@@ -511,7 +511,9 @@ def relatorio():
     with col2:
         st.markdown("<a><button style='display:block; margin-left:auto; margin-right:auto'>PGCL</button></a>", unsafe_allow_html=True)
     with col3:
-        st.markdown("<a><button style='display:block; margin-left:auto; margin-right:auto'>Gerar Relatório</button></a>", unsafe_allow_html=True)
+        gerar = st.button('Gerar Relatório')
+        if gerar:
+            st.print(printer='PDF')
 
         
    
