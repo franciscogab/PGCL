@@ -435,7 +435,7 @@ def relatorio():
         s = sumario.style.hide_index()
         st.write(s.to_html(), unsafe_allow_html=True)
         st.write('##')
-        metas_dimensao = st.selectbox('Metas por dimensão', list(range(1,41)))
+        metas_dimensao = st.selectbox('Meta por dimensão', list(range(1,41)))
         '''
         pd.DataFrame({'1':['Meta por dimensão'],'2':[st.session_state['meta']]})
         m = metas_dimensao.style.hide_index()
@@ -448,7 +448,7 @@ def relatorio():
         ax1.plot(sumario['Dimensão'], [metas_dimensao]*4, color='black')
         
         ax2 = ax1.twinx()
-        ax2.plot(sumario['Dimensão'], sumario['% do total'], color='tab:red')
+        ax2.lines(sumario['Dimensão'], sumario['% do total'], color='tab:red')
 
         st.pyplot(fig)
         
