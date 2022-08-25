@@ -437,6 +437,7 @@ def relatorio():
         st.write('##')
         metas_dimensao = pd.DataFrame({'1':['Meta por dimensão'],'2':[st.session_state['meta']]})
         m = metas_dimensao.style.hide_index()
+        m = m.hide_columns()
         st.write(m.to_html(), unsafe_allow_html=True)
     with col6:
         fig, ax1 = plt.subplots()
