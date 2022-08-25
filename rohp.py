@@ -407,6 +407,7 @@ def relatorio():
 
     st.markdown("<img src='https://firebasestorage.googleapis.com/v0/b/prodesex-8e59f.appspot.com/o/Imagens%2FGRUPO%2007.png?alt=media&token=88307934-0c21-4e23-9b95-f8b8c0996242' alt='ROHP logo' style='display:block; margin-left:auto;margin-right:auto; width:100%'>", unsafe_allow_html=True)
 
+    st.write('##')
     col1,col2=st.columns(2)
     with col1:
         styler= relacional.reset_index(drop=True).style.hide_index().background_gradient(cmap='Blues', subset=pd.IndexSlice[relacional.index.get_level_values(0)[:-1], 'Notas']).set_properties(subset=['Dimensão Relacional'], **{'width': '95%'})
