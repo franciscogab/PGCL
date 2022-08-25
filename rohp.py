@@ -533,5 +533,6 @@ try:
     elif st.session_state['pagina_atual']=='relatorio':
         relatorio()
 except Exception as error:
+    st.write(error)
     principal()
 
