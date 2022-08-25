@@ -453,7 +453,7 @@ def relatorio():
         ax2.set_ylim([0,100])
         ax2.plot(sumario['Dimensão'], [float(i[:-1]) for i in  sumario['% do total']], color='tab:red')
 
-        ax1.grid()
+        ax1.grid(axis = 'y')
 
         st.pyplot(fig)
         
