@@ -412,7 +412,7 @@ def relatorio():
         </style>''', unsafe_allow_html=True)
         st.write(styler.to_html(),unsafe_allow_html=True)
     with col2:
-        styler2= relacional.reset_index(drop=True).style.hide_index().background_gradient(cmap='Greens', subset=pd.IndexSlice[organizacional.index.get_level_values(0)[:-1], 'Notas'])
+        styler2 = organizacional.reset_index(drop=True).style.hide_index().background_gradient(cmap='Greens', subset=pd.IndexSlice[organizacional.index.get_level_values(0)[:-1], 'Notas'])
         st.write(styler2.to_html(),unsafe_allow_html=True)
 
     st.write('###')
