@@ -446,6 +446,7 @@ def relatorio():
         plt.rcParams['font.family'] = 'sans-serif'
         fig, ax1 = plt.subplots()
         ax1.set_ylim([0,40])
+        ax1.set_ylabel('Pontuação')
         ax1.bar(sumario['Dimensão'], sumario['Soma'])
         ax1.plot(sumario['Dimensão'], [metas_dimensao]*4, color='black')
         
@@ -453,6 +454,7 @@ def relatorio():
         ax2.set_ylim([0,100])
         ax2.set_yticks([20,40,60,80,100])
         ax2.set_yticklabels(['20%','40%','60%','80%','100%'])
+        ax2.set_ylabel('% do total')
         ax2.plot(sumario['Dimensão'], [float(i[:-1]) for i in  sumario['% do total']], color='tab:red')
 
         ax1.grid(axis = 'y')
