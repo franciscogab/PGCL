@@ -511,7 +511,7 @@ def relatorio():
         st.markdown('''<p>Emissão: {}</p>
                     <p>{}</p>
                     <p>{}</p>
-                    <p>{}</p>'''.format(datetime.now().strf('%d/%m%/%Y'), st.session_state['nome'], st.session_state['posto'], st.session_state['funcao']), unsafe_allow_html=True)
+                    <p>{}</p>'''.format(datetime.now().strftime('%d/%m%/%Y'), st.session_state['nome'], st.session_state['posto'], st.session_state['funcao']), unsafe_allow_html=True)
 
     st.write('##')
     st.write('##')
