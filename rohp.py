@@ -447,6 +447,7 @@ def relatorio():
         fig, ax1 = plt.subplots()
         ax1.set_ylim([0,40])
         ax1.set_ylabel('Pontuação')
+        ax1.set_xlabel('Dimensão')
         ax1.bar(sumario['Dimensão'], sumario['Soma'])
         ax1.plot(sumario['Dimensão'], [metas_dimensao]*4, color='black')
         
