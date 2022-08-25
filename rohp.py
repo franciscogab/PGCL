@@ -486,7 +486,7 @@ def relatorio():
         'Pontuação':['144 - 160', '112 - 143', '96 - 111','64 - 95', '32 - 63']}
         niveis = pd.DataFrame(niveis)
         niveis = niveis.style.hide_index()
-        niveis.set_properties(**{'background-color':'blue', 'color':'white'})
+        niveis.set_properties(**{'background-color':'#87cefa', 'color':'white'})
         st.markdown(niveis.to_html(), unsafe_allow_html=True)
 
         
